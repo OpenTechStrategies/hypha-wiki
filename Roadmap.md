@@ -1,7 +1,7 @@
 # Schedule
 Below is are the projects objectives for the next year.
 
-## # Horizon 1
+## Horizon 1
 **_Approx. next month_**
 
 ## Horizon 2
