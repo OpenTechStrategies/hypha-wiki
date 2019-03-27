@@ -22,10 +22,10 @@ This is how one can observe, watch, or follow the progress towards the above goa
 The team groups issues/features into quarterly milestones. A full list of current and upcoming milestones by quarter can be found [here](https://github.com/OpenTechFund/opentech.fund/milestones). Each milestone shows how many open and closed issues there are and the progress towards completing all issues. It is not expected that all issues for each milestone will be completed. Remaining ones will be bumped to the next quarter.
 
 ## Monthly
-Issues from the quarterly milestones are put into the [main project board's to do column](https://github.com/OpenTechFund/opentech.fund/projects/2). Issues in that column are expected to be accomplished within the next month.
+Issues from the quarterly milestones are put into the [main project board's _**To Do**_ column](https://github.com/OpenTechFund/opentech.fund/projects/2). Issues in that column are expected to be accomplished within the next month.
 
 ## Weekly
-Issues from the [main project board's](https://github.com/OpenTechFund/opentech.fund/projects/2) To Do column are moved into the Next Up column. Issues in the Next Up column are expected to be accomplished in the following week. Issues within the In Progress column are expected to be accomplished in the current week.
+Issues from the [main project board's](https://github.com/OpenTechFund/opentech.fund/projects/2) _**To Do**_ column are moved into the _**Next Up**_ column. Issues in the _**Next Up**_ column are expected to be accomplished in the following week. Issues within the _**In Progress**_ column are expected to be accomplished in the current week.
 
 ## Specific issues
 All development is directed by individual [issues](https://github.com/OpenTechFund/opentech.fund/issues). Following or watching an issue is the best way to keep up on the progress towards its resolution.
