@@ -1,4 +1,4 @@
-_This is how one can observe, watch, or follow the progress towards on the [Roadmap](https://github.com/OpenTechFund/opentech.fund/wiki/Roadmap)._
+_This is how one can observe, watch, or follow progress on the [Roadmap](https://github.com/OpenTechFund/opentech.fund/wiki/Roadmap)._
 
 # Quarterly 
 The team groups issues/features into quarterly milestones. A full list of current and upcoming milestones by quarter can be found [here](https://github.com/OpenTechFund/opentech.fund/milestones). Each milestone shows how many open and closed issues there are and the progress towards completing all issues. It is not expected that all issues for each milestone will be completed. Remaining ones will be bumped to the next quarter.
