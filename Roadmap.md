@@ -31,7 +31,7 @@ Issues from the [main project board's](https://github.com/OpenTechFund/opentech.
 All development is directed by individual [issues](https://github.com/OpenTechFund/opentech.fund/issues). Following or watching an issue is the best way to keep up on the progress towards its resolution.
 
 ## Recently accomplished
-The most informative way to find what has recently been accomplished and about to be added to the production app is to view [open pull requests](https://github.com/OpenTechFund/opentech.fund/pulls?q=is%3Aopen+is%3Apr). Alternatively, the [Releases list](https://github.com/OpenTechFund/opentech.fund/releases) also shows what has recently be added and deployed. The most informative way to find out what has recently been accomplished and is now on the production app is to view [recently closed pull requests](https://github.com/OpenTechFund/opentech.fund/pulls?q=is%3Apr+is%3Aclosed).
+The most informative way to find what has recently been accomplished and about to be added to the production app is to view [open pull requests](https://github.com/OpenTechFund/opentech.fund/pulls?q=is%3Aopen+is%3Apr). Alternatively, the [releases list](https://github.com/OpenTechFund/opentech.fund/releases) also shows what has recently be added and deployed. The most informative way to find out what has recently been accomplished and is now on the production app is to view [recently closed pull requests](https://github.com/OpenTechFund/opentech.fund/pulls?q=is%3Apr+is%3Aclosed).
 
 As a general routine, the project releases new features/fixes in weekly batches on Fridays.
 
