@@ -1,7 +1,8 @@
 Below is are the projects objectives for the next year.
 
 # Horizon 1
-**_Approx. next month_**
+**Approx. next month**
+See progress by reviewing [priority tickets](https://github.com/OpenTechFund/opentech.fund/labels/priority) for the current milestone and/or todo list on the [main project board](https://github.com/OpenTechFund/opentech.fund/projects/2). 
 
 * Create list of tasks, deadlines, and stakeholders we need to interview during exploratory sessions
 * What does API/metadata inform us about current and future programming?
