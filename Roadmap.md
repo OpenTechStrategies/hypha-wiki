@@ -21,6 +21,8 @@ Below is are the projects objectives for the next year.
 
 * Development of PAF central database
 * Rapid testing of new PAF system
+* Creation of tool for applicants to navigate various funds #697
+* Training and how-to materials for external stakeholders 
 
 # Horizon 4
 **_Approx. next 12 months_**
