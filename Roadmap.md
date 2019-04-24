@@ -6,7 +6,7 @@ Below is are the projects objectives for the next year.
 See progress by reviewing [priority tickets](https://github.com/OpenTechFund/opentech.fund/labels/priority) for the current milestone ([2019-Q2](https://github.com/OpenTechFund/opentech.fund/milestone/1)) and/or todo list on the [main project board](https://github.com/OpenTechFund/opentech.fund/projects/2). 
 
 ## Dev goals
-_From [priority tickets within the current milestone](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q2&utf8=%E2%9C%93)_
+_From priority tickets within the current milestone ([2019-Q2+priority](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q2&utf8=%E2%9C%93)_
 
 * Curate issues for the June [mini-sprint](https://github.com/OpenTechFund/opentech.fund/labels/todd_mini_sprint)
 * Define overall goals for summer sprints and kick-off discovery process
@@ -23,7 +23,7 @@ _From [priority tickets within the current milestone](https://github.com/OpenTec
 * Finish data migration from old app to current app, shutdown old app
 * Performance and bug fixes always
 
-From non-priority tickets in the current milestone ([2019-Q2](https://github.com/OpenTechFund/opentech.fund/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+-label%3Apriority+milestone%3A2019-Q2+))
+From non-priority tickets in the current milestone ([2019-Q2-priority](https://github.com/OpenTechFund/opentech.fund/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+-label%3Apriority+milestone%3A2019-Q2+))
 
 * Harmonize the viability definitions and implement the same options for comments, reviews, and submissions
 * Introduce an optional survey for applicants to complete post final-determination
