@@ -23,7 +23,7 @@ _From [priority tickets within the current milestone](https://github.com/OpenTec
 * Finish data migration from old app to current app, shutdown old app
 * Performance and bug fixes always
 
-From [non-priority tickets in the current milestone](https://github.com/OpenTechFund/opentech.fund/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+-label%3Apriority+milestone%3A2019-Q2+)
+From non-priority tickets in the current milestone ([2019-Q2](https://github.com/OpenTechFund/opentech.fund/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+-label%3Apriority+milestone%3A2019-Q2+))
 
 * Harmonize the viability definitions and implement the same options for comments, reviews, and submissions
 * Introduce an optional survey for applicants to complete post final-determination
@@ -35,23 +35,30 @@ From [non-priority tickets in the current milestone](https://github.com/OpenTech
 
 ## Discussions 
 * Create list of tasks, deadlines, and stakeholders we need to interview during exploratory sessions
-* What does API/metadata inform us about current and future programming?
-* What can we infer and what can we deduct from information we have at hand? Do we have complete picture or are there gaps?
+* What could the API/metadata inform us about current and future programming?
+* What can we infer and what can we deduct from information we have at hand? Do we have complete picture and what are the gaps?
 
 # Horizon 2
 **_Approx. next 3 months_**
 
 ## Dev goals
-Items from the [current milestone](https://github.com/OpenTechFund/opentech.fund/milestone/1) not included above or from the [approaching milestone](https://github.com/OpenTechFund/opentech.fund/milestone/2).
+Items from the current milestone ([2019-Q2](https://github.com/OpenTechFund/opentech.fund/milestone/1)) not included above or from the approaching milestone ([2019-Q3](https://github.com/OpenTechFund/opentech.fund/milestone/2)).
+
+[todo, need to move items from above down here as is right and go through later milestone and creating high-level summaries]
+
 
 * Complete mini-sprint, complete discovery, be fully into summer sprints
+* Introduce post approval features such as PAF, invoice, monthly report, management
+* Review and refine as needed the current responsible data policy
+* Conduct a responsible data audit
+* Change the repo name to an standalone project/app name and release a website highlighting the app itself
+* Create a security information page outlining the security/privacy features of the app along with our ongoing guidelines for future features
+
 
 ## Discussions
-* What are tangible results from information? What materials do we need to meet objectives? Do we have sufficient capacity to implement activities?
-* UX/UI exploratory sessions and share feedback with team
-* Test migration of data from old to new webapp
-* Give applicants more information, messages, feedback loop
-* Creates responsible data and information security standards
+* What are tangible outcomes from having better access to submission information? What materials do we need to meet objectives? Do we have sufficient capacity to implement activities?
+* What further internal or external UX/UI exploratory sessions should we conduct and how best to share feedback with team, applicants, and the public?
+* What additional information and communication do applicants need (ie guidance, messages/comms) and how do we improve our ongoing feedback loop with them?
 
 # Horizon 3
 **_Approx. next 6 months_**
@@ -59,10 +66,11 @@ Items from the [current milestone](https://github.com/OpenTechFund/opentech.fund
 ## Dev goals
 Items not above from the next two or three milestones.
 
+[todo, still need to go through these milestones to create high-level summaries like above]
 
 ## Discussions
 
-* Development of PAF central database
+* Should we import all the manually created PAF's into the app for a PAF central database?
 * Rapid testing of new PAF system
 * Creation of tool for applicants to navigate various funds #697
 * Training and how-to materials for external stakeholders 
@@ -72,6 +80,8 @@ Items not above from the next two or three milestones.
 
 ## Dev goals
 Items not above from the next three or four milestones.
+
+[todo, still need to go through these milestones to create high-level summaries like above]
 
 ## Discussions
 What are our goals one year from now? Example: 1) Increase number of applications that focus on emergent issue from difficult to reach communities we care about  2) PAF centralize database for invoices, monthly reports, and contracts.
