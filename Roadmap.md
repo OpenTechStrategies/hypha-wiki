@@ -7,7 +7,10 @@ See progress by reviewing [priority tickets](https://github.com/OpenTechFund/ope
 
 ## Dev goals
 _From [priority tickets within the current milestone](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q2&utf8=%E2%9C%93)_
+
 * Curate issues for the June [mini-sprint](https://github.com/OpenTechFund/opentech.fund/labels/todd_mini_sprint)
+* Define overall goals for summer sprints and kick-off discovery process
+
 * Implement basic automation for manager tasks (ie move an application into a new state upon defined conditions)
 * Refine the major workflow and UI features from the recently deployed winter sprints
 * Identify and address what needs to be done to make the app as non-OTF specific as possible
@@ -18,6 +21,7 @@ _From [priority tickets within the current milestone](https://github.com/OpenTec
 * Improve the handling of private files
 * Begin to introduce deadlines to various actions and content (ie for responding to determinations or submitting reviews)
 * Add additional user account security features (ie MFA, hacked passwords, etc)
+* Finish data migration from old app to current app, shutdown old app
 * Performance and bug fixes always
 
 From [non-priority tickets in the current milestone](https://github.com/OpenTechFund/opentech.fund/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+-label%3Apriority+milestone%3A2019-Q2+)
@@ -39,6 +43,9 @@ From [non-priority tickets in the current milestone](https://github.com/OpenTech
 **_Approx. next 3 months_**
 
 ## Dev goals
+Items from the [current milestone](https://github.com/OpenTechFund/opentech.fund/milestone/1) not included above or from the [approaching milestone](https://github.com/OpenTechFund/opentech.fund/milestone/2).
+
+* Complete mini-sprint, complete discovery, be fully into summer sprints
 
 ## Discussions
 * What are tangible results from information? What materials do we need to meet objectives? Do we have sufficient capacity to implement activities?
@@ -50,6 +57,12 @@ From [non-priority tickets in the current milestone](https://github.com/OpenTech
 # Horizon 3
 **_Approx. next 6 months_**
 
+## Dev goals
+Items not above from the next two or three milestones.
+
+
+## Discussions
+
 * Development of PAF central database
 * Rapid testing of new PAF system
 * Creation of tool for applicants to navigate various funds #697
@@ -57,6 +70,11 @@ From [non-priority tickets in the current milestone](https://github.com/OpenTech
 
 # Horizon 4
 **_Approx. next 12 months_**
+
+## Dev goals
+Items not above from the next three or four milestones.
+
+## Discussions
 What are our goals one year from now? Example: 1) Increase number of applications that focus on emergent issue from difficult to reach communities we care about  2) PAF centralize database for invoices, monthly reports, and contracts.
 
 The [Following Progress page](https://github.com/OpenTechFund/opentech.fund/wiki/Following-progress) outlines how one can observe, watch, or follow the progress towards the above goals.
