@@ -48,7 +48,7 @@ Items from the current milestone ([2019-Q2](https://github.com/OpenTechFund/open
 
 
 * Complete mini-sprint, complete discovery, be fully into summer sprints
-* Introduce post approval features such as PAF, invoice, monthly report, management
+* Introduce and test post approval features such as PAF, invoice, monthly report, creation/management
 * Review and refine as needed the current responsible data policy
 * Conduct a responsible data audit
 * Change the repo name to an standalone project/app name and release a website highlighting the app itself
@@ -71,9 +71,8 @@ Items not above from the next two or three milestones.
 ## Discussions
 
 * Should we import all the manually created PAF's into the app for a PAF central database?
-* Rapid testing of new PAF system
-* Creation of tool for applicants to navigate various funds #697
-* Training and how-to materials for external stakeholders 
+* What additional tools or resources do for applicants to navigate various funds, see #697?
+* * Training and how-to materials for external stakeholders
 
 # Horizon 4
 **_Approx. next 12 months_**
@@ -84,7 +83,7 @@ Items not above from the next three or four milestones.
 [todo, still need to go through these milestones to create high-level summaries like above]
 
 ## Discussions
-What are our goals one year from now? Example: 1) Increase number of applications that focus on emergent issue from difficult to reach communities we care about  2) PAF centralize database for invoices, monthly reports, and contracts.
+* What are our goals one year from now?
 
 The [Following Progress page](https://github.com/OpenTechFund/opentech.fund/wiki/Following-progress) outlines how one can observe, watch, or follow the progress towards the above goals.
 
