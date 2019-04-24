@@ -72,7 +72,7 @@ Items not above from the next two or three milestones.
 
 * Should we import all the manually created PAF's into the app for a PAF central database?
 * What additional tools or resources do for applicants to navigate various funds, see #697?
-* * Training and how-to materials for external stakeholders
+  * Training and how-to materials for external stakeholders
 
 # Horizon 4
 **_Approx. next 12 months_**
