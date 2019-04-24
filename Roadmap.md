@@ -10,7 +10,6 @@ _From [priority tickets within the current milestone](https://github.com/OpenTec
 
 * Curate issues for the June [mini-sprint](https://github.com/OpenTechFund/opentech.fund/labels/todd_mini_sprint)
 * Define overall goals for summer sprints and kick-off discovery process
-
 * Implement basic automation for manager tasks (ie move an application into a new state upon defined conditions)
 * Refine the major workflow and UI features from the recently deployed winter sprints
 * Identify and address what needs to be done to make the app as non-OTF specific as possible
