@@ -1,11 +1,12 @@
-Below is are the projects objectives for the next year.
+Below is are the projects objectives by time first and then by theme.
 
-# Horizon 1
+# By time
+## Horizon 1
 **Approx. next month**
 
 See progress by reviewing [priority tickets](https://github.com/OpenTechFund/opentech.fund/labels/priority) for the current milestone ([2019-Q2](https://github.com/OpenTechFund/opentech.fund/milestone/1)) and/or todo list on the [main project board](https://github.com/OpenTechFund/opentech.fund/projects/2). 
 
-## Dev goals
+### Dev goals
 _From priority tickets within the current milestone ([2019-Q2 +priority](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q2&utf8=%E2%9C%93))_
 
 * Curate issues for the June [mini-sprint](https://github.com/OpenTechFund/opentech.fund/labels/todd_mini_sprint)
@@ -33,15 +34,15 @@ From non-priority tickets in the current milestone ([2019-Q2 -priority](https://
 * Begin offering the ability to associate a Signal number to receive and respond to notifications
 * Ability for users to submit bug or feature requests from within the app or on error pages
 
-## Discussions 
+### Discussions 
 * Create list of tasks, deadlines, and stakeholders we need to interview during exploratory sessions
 * What could the API/metadata inform us about current and future programming?
 * What can we infer and what can we deduct from information we have at hand? Do we have complete picture and what are the gaps?
 
-# Horizon 2
+## Horizon 2
 **_Approx. next 3 months_**
 
-## Dev goals
+### Dev goals
 Items from the current milestone ([2019-Q2](https://github.com/OpenTechFund/opentech.fund/milestone/1)) not included above or from the approaching milestone ([2019-Q3](https://github.com/OpenTechFund/opentech.fund/milestone/2)).
 
 [todo, need to move items from above down here as is right and go through later milestone and creating high-level summaries]
@@ -55,35 +56,38 @@ Items from the current milestone ([2019-Q2](https://github.com/OpenTechFund/open
 * Create a security information page outlining the security/privacy features of the app along with our ongoing guidelines for future features
 
 
-## Discussions
+### Discussions
 * What are tangible outcomes from having better access to submission information? What materials do we need to meet objectives? Do we have sufficient capacity to implement activities?
 * What further internal or external UX/UI exploratory sessions should we conduct and how best to share feedback with team, applicants, and the public?
 * What additional information and communication do applicants need (ie guidance, messages/comms) and how do we improve our ongoing feedback loop with them?
 
-# Horizon 3
+## Horizon 3
 **_Approx. next 6 months_**
 
-## Dev goals
+### Dev goals
 Items not above from the next two or three milestones.
 
 [todo, still need to go through these milestones to create high-level summaries like above]
 
-## Discussions
+### Discussions
 
 * Should we import all the manually created PAF's into the app for a PAF central database?
 * What additional tools or resources do for applicants to navigate various funds, see #697?
   * Training and how-to materials for external stakeholders
 
-# Horizon 4
+## Horizon 4
 **_Approx. next 12 months_**
 
-## Dev goals
+### Dev goals
 Items not above from the next three or four milestones.
 
 [todo, still need to go through these milestones to create high-level summaries like above]
 
-## Discussions
+### Discussions
 * What are our goals one year from now?
 
 The [Following Progress page](https://github.com/OpenTechFund/opentech.fund/wiki/Following-progress) outlines how one can observe, watch, or follow the progress towards the above goals.
 
+# By theme
+
+## Epics
