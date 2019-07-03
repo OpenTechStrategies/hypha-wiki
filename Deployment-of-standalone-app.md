@@ -25,7 +25,7 @@
 
 - `pip install -r requirements.txt`
 - `pip install 'stellar==0.4.5'` (not needed in production)
-- `pip install 'Werkzeug==0.14.1'`
+- `pip install 'Werkzeug==0.14.1'` (not needed in production)
 
 ## Post-install setup
 
