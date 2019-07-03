@@ -9,6 +9,7 @@
 ## Packages Installed before requirements.txt
 
 - python3-pip
+- postgresql (version 10.9): `sudo apt-get install postgresql postgresql-contrib`
 - nodejs (version v12.5.0): 
   - `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -`
   - `sudo apt-get install nodejs`
@@ -33,24 +34,10 @@
 
 ## Running app
 
-- Tried two options:
-  - From Heroku deployment: `python manage.py collectstatic --noinput`
-  - Got: 
-    ```
-    No Django settings specified.
-    Unknown command: 'collectstatic'
-    Type 'manage.py help' for usage.
-    ```
-  - From Vagrant deployment: 
-     - `export PYTHONPATH=/home/ubuntu/opentech.fund/`
-     - `export DJANGO_ADMIN_SETTINGS=opentech.settings.production`
-  - Got:
-   `ModuleNotFoundError: No module named 'opentech'`
-  - Then tried to set DJANGO_ADMIN_SETTINGS and use `python manage.py collectstatic --noinput`
-  - Got: `django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.`
-  - so: `export SECRET_KEY='THIS IS NOT A SECRET'`
-  - then: 
-   ```
-   manage.py collectstatic: error: unrecognized arguments: --noinputpython manage.py collectstatic
-   ```
+- `export DJANGO_ADMIN_SETTINGS=opentech.settings.production`
+- `export SECRET_KEY='SOME SECRET KEY HERE'`
+- `python manage.py collectstatic --noinput`
+- `python manage.py migrate --noinput && python manage.py clear_cache --cache=default --cache=wagtailcache`
+  
+   
    
