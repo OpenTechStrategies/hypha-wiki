@@ -46,5 +46,11 @@
      - `export DJANGO_ADMIN_SETTINGS=opentech.settings.production`
   - Got:
    `ModuleNotFoundError: No module named 'opentech'`
-   
+  - Then tried to set DJANGO_ADMIN_SETTINGS and use `python manage.py collectstatic --noinput`
+  - Got: `django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.`
+  - so: `export SECRET_KEY='THIS IS NOT A SECRET'`
+  - then: 
+   ```
+   manage.py collectstatic: error: unrecognized arguments: --noinputpython manage.py collectstatic
+   ```
    
