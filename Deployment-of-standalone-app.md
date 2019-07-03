@@ -33,7 +33,7 @@
 
 ## Running app
 
-- Tried several options:
+- Tried two options:
   - From Heroku deployment: `python manage.py collectstatic --noinput`
   - Got: 
     ```
