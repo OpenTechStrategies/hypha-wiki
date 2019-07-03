@@ -37,6 +37,7 @@
 - `export DJANGO_ADMIN_SETTINGS=opentech.settings.production`
 - `export SECRET_KEY='SOME SECRET KEY HERE'`
 - `python manage.py collectstatic --noinput`
+- `python manage.py createcachetable`
 - `python manage.py migrate --noinput && python manage.py clear_cache --cache=default --cache=wagtailcache`
   
    
