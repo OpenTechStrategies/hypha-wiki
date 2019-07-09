@@ -10,7 +10,7 @@ See progress by reviewing [priority tickets](https://github.com/OpenTechFund/ope
 _From priority tickets within the current milestone ([2019-Q3 +priority](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q3&utf8=%E2%9C%93))_
 
 * Complete discovery and scoping for summer sprints
-* Creation of summer sprint tickets that focus on post approval workflows (project approval forms, contracting, payment requests, and regular project reporting) 
+* Creation of summer sprint tickets that focus on post approval workflows (project approval forms, contracting, payment requests, and regular project reporting) https://github.com/OpenTechFund/opentech.fund/issues?q=is%3Aopen+is%3Aissue+label%3Apost-approval
 * Deploy API access for both users and projects
 * Deploy ability for staff to apply labels to submissions (meta)
 * Deploy first set of automation functions
