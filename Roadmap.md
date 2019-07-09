@@ -4,27 +4,19 @@ Below is are the projects objectives by time first and then by theme.
 ## Horizon 1
 **Approx. next month**
 
-See progress by reviewing [priority tickets](https://github.com/OpenTechFund/opentech.fund/labels/priority) for the current milestone ([2019-Q2](https://github.com/OpenTechFund/opentech.fund/milestone/1)) and/or todo list on the [main project board](https://github.com/OpenTechFund/opentech.fund/projects/2). 
+See progress by reviewing [priority tickets](https://github.com/OpenTechFund/opentech.fund/labels/priority) for the current milestone ([2019-Q3]https://github.com/OpenTechFund/opentech.fund/milestone/2)) and/or todo list on the [main project board](https://github.com/OpenTechFund/opentech.fund/projects/2). 
 
 ### Dev goals
-_From priority tickets within the current milestone ([2019-Q2 +priority](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q2&utf8=%E2%9C%93))_
+_From priority tickets within the current milestone ([2019-Q3 +priority](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q3&utf8=%E2%9C%93))_
 
-* Curate issues for the June [mini-sprint](https://github.com/OpenTechFund/opentech.fund/labels/todd_mini_sprint)
-* Define overall goals for summer sprints and kick-off discovery process
-* Implement basic automation for manager tasks (ie move an application into a new state upon defined conditions)
-* Refine the major workflow and UI features from the recently deployed winter sprints
-* Identify and address what needs to be done to make the app as non-OTF specific as possible
-* Ability for managers and reviewers to apply pre-defined and on-the-fly classifiers to submissions
-* More capabilities for authors, reviewers, and managers to modify previously posted submissions, reviews, determinations, and comments (ie edit, delete, change visibility, revert to previous state, etc)
-* Refinement of the partner functions that allow non-applicants to submit reviews and edit submissions
-* Release first API version at api.opentech.fund with both authenticated endpoints for applications and public endpoints for meta data
-* Improve the handling of private files
-* Begin to introduce deadlines to various actions and content (ie for responding to determinations or submitting reviews)
-* Add additional user account security features (ie MFA, hacked passwords, etc)
-* Finish data migration from old app to current app, shutdown old app
+* Complete discovery and scoping for summer sprints
+* Creation of summer sprint tickets that focus on post approval workflows (project approval forms, contracting, payment requests, and regular project reporting)
+* Deploy API access for both users and projects
+* Deploy ability for staff to apply labels to submissions (meta)
+* Deploy first set of automation functions
 * Performance and bug fixes always
 
-From non-priority tickets in the current milestone ([2019-Q2 -priority](https://github.com/OpenTechFund/opentech.fund/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+-label%3Apriority+milestone%3A2019-Q2+))
+From non-priority tickets in the current milestone ([2019-Q3 -priority](https://github.com/OpenTechFund/opentech.fund/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+-label%3Apriority+milestone%3A2019-Q3+))
 
 * Harmonize the viability definitions and implement the same options for comments, reviews, and submissions
 * Introduce an optional survey for applicants to complete post final-determination
@@ -35,7 +27,6 @@ From non-priority tickets in the current milestone ([2019-Q2 -priority](https://
 * Ability for users to submit bug or feature requests from within the app or on error pages
 
 ### Discussions 
-* Create list of tasks, deadlines, and stakeholders we need to interview during exploratory sessions
 * What could the API/metadata inform us about current and future programming?
 * What can we infer and what can we deduct from information we have at hand? Do we have complete picture and what are the gaps?
 
@@ -43,12 +34,10 @@ From non-priority tickets in the current milestone ([2019-Q2 -priority](https://
 **_Approx. next 3 months_**
 
 ### Dev goals
-Items from the current milestone ([2019-Q2](https://github.com/OpenTechFund/opentech.fund/milestone/1)) not included above or from the approaching milestone ([2019-Q3](https://github.com/OpenTechFund/opentech.fund/milestone/2)).
+Items from the current milestone ([2019-Q3](https://github.com/OpenTechFund/opentech.fund/milestone/2)) not included above or from the approaching milestone ([2019-Q4](https://github.com/OpenTechFund/opentech.fund/milestone/3)).
 
 [todo, need to move items from above down here as is right and go through later milestone and creating high-level summaries]
 
-
-* Complete mini-sprint, complete discovery, be fully into summer sprints
 * Introduce and test post approval features such as PAF, invoice, monthly report, creation/management
 * Review and refine as needed the current responsible data policy
 * Conduct a responsible data audit
