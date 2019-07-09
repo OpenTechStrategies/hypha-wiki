@@ -4,7 +4,7 @@ Below is are the projects objectives by time first and then by theme.
 ## Horizon 1
 **Approx. next month**
 
-See progress by reviewing [priority tickets](https://github.com/OpenTechFund/opentech.fund/labels/priority) for the current milestone ([2019-Q3]https://github.com/OpenTechFund/opentech.fund/milestone/2)) and/or todo list on the [main project board](https://github.com/OpenTechFund/opentech.fund/projects/2). 
+See progress by reviewing [priority tickets](https://github.com/OpenTechFund/opentech.fund/labels/priority) for the current milestone ([2019-Q3](https://github.com/OpenTechFund/opentech.fund/milestone/2)) and/or todo list on the [main project board](https://github.com/OpenTechFund/opentech.fund/projects/2). 
 
 ### Dev goals
 _From priority tickets within the current milestone ([2019-Q3 +priority](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q3&utf8=%E2%9C%93))_
