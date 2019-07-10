@@ -39,8 +39,8 @@
 - `sudo su - postgres`
 - `psql`
 - `CREATE DATABASE opentech;`
-- `CREATE USER root WITH SUPERUSER LOGIN` (temporary until we get this going, then we'll restrict.)
-- Also, make sure that the root user has trust access in pg_hba.conf (also will restrict later.)
+- `CREATE USER [linux username] WITH SUPERUSER LOGIN` (temporary until we get this going, then we'll restrict.)
+- Also, make sure that this user has trust access in pg_hba.conf (also will restrict later.)
 
 ## Running app
 
