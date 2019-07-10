@@ -50,7 +50,7 @@
 - `python manage.py collectstatic --noinput`
 - `python manage.py createcachetable`
 - `python manage.py migrate --noinput && python manage.py clear_cache --cache=default --cache=wagtailcache`
-- `python manage.py runserver` (runs development server)
+- `python manage.py runserver` (runs development server at http://127.0.0.1:8000)
 
 ## Deploy to ports 80/443
   
