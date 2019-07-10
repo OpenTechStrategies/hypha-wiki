@@ -32,6 +32,15 @@
 - `npm install`
 - `gulp deploy`
 
+## Database setup
+
+- `sudo apt-get install postgresql postgresql-contrib`
+- `sudo service postgresql start`
+- `sudo su - postgres`
+- `psql`
+- `CREATE DATABASE opentech;`
+- `CREATE USER root WITH SUPERUSER LOGIN` (temporary until we get this going, then we'll restrict.)
+
 ## Running app
 
 - `export DJANGO_ADMIN_SETTINGS=opentech.settings.production`
