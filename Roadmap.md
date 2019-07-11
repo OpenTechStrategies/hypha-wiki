@@ -22,7 +22,7 @@ From non-priority tickets in the current milestone ([2019-Q3 -priority](https://
 * Introduce an optional survey for applicants to complete post final-determination [#835](https://github.com/OpenTechFund/opentech.fund/issues/835)
 * Allow users the ability to see and set their notification preferences in their profile
 * Expose useful meta-data (avg amount approved, type of project, etc) from the API on internal and external pages (ie round and fund pages) 
-* Improve the listing of projects, fellows, and other results on the public facing pages
+* Improve the listing of projects, fellows, and other results on the public facing pages [#1248](https://github.com/OpenTechFund/opentech.fund/issues/1248)
 * Begin offering the ability to associate a Signal number to receive and respond to notifications
 * Ability for users to submit bug or feature requests from within the app or on error pages
 
