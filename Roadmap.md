@@ -19,7 +19,7 @@ _From priority tickets within the current milestone ([2019-Q3 +priority](https:/
 From non-priority tickets in the current milestone ([2019-Q3 -priority](https://github.com/OpenTechFund/opentech.fund/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+-label%3Apriority+milestone%3A2019-Q3+))
 
 * Harmonize the viability definitions and implement the same options for comments, reviews, and submissions
-* Introduce an optional survey for applicants to complete post final-determination
+* Introduce an optional survey for applicants to complete post final-determination [#835](https://github.com/OpenTechFund/opentech.fund/issues/835)
 * Allow users the ability to see and set their notification preferences in their profile
 * Expose useful meta-data (avg amount approved, type of project, etc) from the API on internal and external pages (ie round and fund pages) 
 * Improve the listing of projects, fellows, and other results on the public facing pages
