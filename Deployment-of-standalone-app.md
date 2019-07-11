@@ -34,7 +34,6 @@
 
 ## Database setup
 
-- `sudo apt-get install postgresql postgresql-contrib`
 - `sudo service postgresql start`
 - `sudo su - postgres`
 - `psql`
