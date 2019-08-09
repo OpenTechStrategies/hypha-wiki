@@ -9,6 +9,18 @@ See progress by reviewing [priority tickets](https://github.com/OpenTechFund/ope
 ### Dev goals
 _From priority tickets within the current milestone ([2019-Q3 +priority](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q3&utf8=%E2%9C%93))_
 
+August
+* Bring back the short proposal form for concept notes that are requesting less than 100k #717
+* Create a new page template called "Results", that can be placed anywhere #1248
+* Update the region scheme to the UN scheme and update all submissions accordingly #1173 
+* Create a view of projects and fellows by geographic location (the map of where our support is going idea) #243 
+* As a manager, the ability to customize available options from global fields when displayed on application #311
+* Add a deadline field to determinations and include deadline in any notifications, if included #326
+* Add a "Applications with deadlines" list to a users dashboard, listing submissions with deadlines for both applicants and the leads of those applications #306 
+* As a manager, i need an easy way to track all set deadline dates given to an applicant or staff member #285
+* As a reviewer, receive automated reminders for outstanding reviews assigned as deadlines approach #273
+
+June-July
 * Complete discovery and scoping for summer sprints
 * Creation of [summer spring tickets](https://github.com/OpenTechFund/opentech.fund/issues?q=is%3Aopen+is%3Aissue+label%3Apost-approval) that focus on post approval workflows (project approval forms, contracting, payment requests, and regular project reporting) 
 * Deploy API access for both users and projects
