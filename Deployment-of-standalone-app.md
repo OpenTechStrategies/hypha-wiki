@@ -51,7 +51,49 @@
 - `python manage.py migrate --noinput && python manage.py clear_cache --cache=default --cache=wagtailcache`
 - `python manage.py runserver` (runs development server at http://127.0.0.1:8000)
 
-## Deploy to ports 80/443
+## Deploy with nginx/gunicorn
+
+- make sure gunicorn is installed (should be)
+- test run with gunicorn: `gunicorn --bind 0.0.0.0:<some port> opentech.wsgi:application`
+- add /etc/systemd/system/gunicorn.socket
+```
+[Unit]
+Description=gunicorn service
+Requires=gunicorn.socket
+After=network.target
+
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/opentech.fund/
+ExecStart=/home/ubuntu/opentech.fund/venv/opentech/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/opentech.fund/gunicorn.sock opentech.wsgi:application -e DJANGO_ADMIN_SETTINGS=opentech.production -e SECRET_KEY='SOME SECRET KEY HERE'
+
+[Install]
+WantedBy=multi-user.target
+```
+- start and enable the socket: `sudo systemctl start gunicorn.socket`, `sudo systemctl enable gunicorn.socket`
+- check status of socket: `sudo systemctl status gunicorn.socket`
+- test status of gunicorn: `sudo systemctl status gunicorn`
+- Add new config file for nginx in /etc/nginx/sites-available:
+```
+server {
+    listen 80;
+    server_name ec2-3-84-236-234.compute-1.amazonaws.com;
+
+    location /static/ {
+        root /home/ubuntu/opentech.fund/opentech;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+
+}
+```
+- symlink to sites-enabled: `sudo ln -s /etc/nginx/sites-available/newfile /etc/nginx/sites-enabled`
+- restart nginx: `sudo systemctl restart nginx`
   
    
    
