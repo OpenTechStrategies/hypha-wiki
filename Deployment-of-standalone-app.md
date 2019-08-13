@@ -81,8 +81,8 @@ server {
     listen 80;
     server_name ec2-3-84-236-234.compute-1.amazonaws.com;
 
-    location /static/ {
-        root /home/ubuntu/opentech.fund/opentech;
+     location /static/ {
+        root /home/ubuntu/opentech.fund/opentech/staticfiles/;
     }
 
     location / {
