@@ -4,7 +4,6 @@
 
 - AWS T2-micro
 - Ubuntu 18.04
-- (Also tested on WSL Ubuntu 18.04)
 
 ## Packages Installed before requirements.txt
 
