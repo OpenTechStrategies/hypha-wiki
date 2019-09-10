@@ -1,87 +1,85 @@
 # OTF Application Installation Process
 
-## Server Specs
+## Standalone Server/VPS
 
-- AWS T2-micro
-- Ubuntu 18.04
+This process was tested on Ubuntu 18.04LTS. It should work on any Debian-based system.
 
-## Packages Installed before requirements.txt
+### Basic installation steps.
 
-- python3-pip
-- postgresql (version 10.9): `sudo apt-get install postgresql postgresql-contrib`
-- nodejs (version v12.5.0): 
-  - `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -`
-  - `sudo apt-get install nodejs`
-- gulp (version 4.0.2 CLI version 2.2.0):
-  - `sudo npm install -g gulp`
+These are the basic packages needed before you can start the installation process.
 
-## Setting up virtual environment
+- python3-pip - install using  `sudo apt-get install python3-pip`
+- postgresql (version 10.9) use `sudo apt-get install postgresql postgresql-contrib`
+- to install nodejs (version v12.5.0), use nodesource. Add the PPA to your sources list by running this script: `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - then `sudo apt-get install nodejs`
+- gulp (version 4.0.2 CLI version 2.2.0) installed using `sudo npm install -g gulp`
 
-- `virtualenv --python=/usr/bin/python3 venv/opentech`
-- `source venv/opentech/bin/activate`
+Then, you'll want to set up a virtual environment: `virtualenv --python=/usr/bin/python3 venv/opentech` and `source venv/opentech/bin/activate`
 
-## Installing packages 
+Next, install the required packages using `pip install -r requirements.txt`. You can also install stellar and Werkzeug, but they are not required in production.
 
-- `pip install -r requirements.txt`
 - `pip install 'stellar==0.4.5'` (not needed in production)
 - `pip install 'Werkzeug==0.14.1'` (not needed in production)
 
-## Post-install setup
+### Post-install setup
+You'll want to install npm, `npm install`, and then deploy gulp using `gulp deploy`.
 
-- `npm install`
-- `gulp deploy`
+Postgresql is the database used. Start the server you installed above using `sudo service postgresql start`, then log into the postgres superuser, `sudo su - postgres` and enter the postgresql cli with `psql`. In the CLI, use these commands:
 
-## Database setup
-
-- `sudo service postgresql start`
-- `sudo su - postgres`
-- `psql`
 - `CREATE DATABASE opentech;`
-- `CREATE USER [linux username] WITH SUPERUSER LOGIN` (temporary until we get this going, then we'll restrict.)
-- Also, make sure that this user has trust access in pg_hba.conf (also will restrict later.)
+- `CREATE USER [linux username] WITH SUPERUSER LOGIN`
+- Also, make sure that this user has trust access in pg_hba.conf.
 
-## Running app
+These settings can be restricted later as required.
 
-- `export DJANGO_ADMIN_SETTINGS=opentech.settings.production`
-- `export SECRET_KEY='SOME SECRET KEY HERE'`
-- `export SECURE_SSL_REDIRECT=false` (to prevent SSL redirect)
+### Running the app
+
+First, choose the correct settings - the possibilities are 'dev', 'test', and 'production'. If you're going to set this up in a production setting, then 'production' is the one to use: `export DJANGO_ADMIN_SETTINGS=opentech.settings.production`. The application needs a secret key: `export SECRET_KEY='SOME SECRET KEY HERE'`.
+
+To begin with, set the `export SECURE_SSL_REDIRECT=false` to prevent SSL redirect. When you've set up SSL for your server, you can change that setting later.
+
+Then use the following commands to test run the server:
+
 - `python manage.py collectstatic --noinput`
 - `python manage.py createcachetable`
 - `python manage.py migrate --noinput && python manage.py clear_cache --cache=default --cache=wagtailcache`
 - `python manage.py runserver` (runs development server at http://127.0.0.1:8000)
 
-## Deploy with nginx/gunicorn
+You should see the home page of the server. That's great. We can then take the next steps.
 
-- make sure gunicorn is installed (should be)
-- test run with gunicorn: `gunicorn --bind 0.0.0.0:<some port> opentech.wsgi:application`
-- add /etc/systemd/system/gunicorn.socket
+### Deploy with nginx/gunicorn
+
+Make sure gunicorn is installed (it should be). Do a test run with gunicorn: `gunicorn --bind 0.0.0.0:<some port> opentech.wsgi:application` This might not work. It's OK if it doesn't work - you can go on anyway.
+
+You need to add a file: /etc/systemd/system/gunicorn.socket. It should have this content:
+
 ```
 [Unit]
 Description=gunicorn service
 Requires=gunicorn.socket
 After=network.target
 
-
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/opentech.fund/
-ExecStart=/home/ubuntu/opentech.fund/venv/opentech/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/opentech.fund/gunicorn.sock opentech.wsgi:application -e DJANGO_ADMIN_SETTINGS=opentech.production -e SECRET_KEY='SOME SECRET KEY HERE'
+WorkingDirectory=/path/to/application/
+ExecStart=/path/to/virtual/environment/bin/gunicorn --access-logfile - --workers 3 --bind unix:/path/to/application/gunicorn.sock opentech.wsgi:application -e DJANGO_ADMIN_SETTINGS=opentech.production -e SECRET_KEY='SOME SECRET KEY HERE'
 
 [Install]
 WantedBy=multi-user.target
 ```
-- start and enable the socket: `sudo systemctl start gunicorn.socket`, `sudo systemctl enable gunicorn.socket`
-- check status of socket: `sudo systemctl status gunicorn.socket`
-- test status of gunicorn: `sudo systemctl status gunicorn`
-- Add new config file for nginx in /etc/nginx/sites-available:
+You can start and enable the socket by using `sudo systemctl start gunicorn.socket`, `sudo systemctl enable gunicorn.socket`. You can check status of socket using `sudo systemctl status gunicorn.socket`.
+You can test the status of gunicorn: `sudo systemctl status gunicorn`.
+
+Set up DNS so that server.domain and apply.server.domain point to the server you've installed the application. Install nginx if you haven't already (`sudo apt-get install nginx`). You'll need to add two new config files for nginx in /etc/nginx/sites-available:
+
+main
 ```
 server {
     listen 80;
-    server_name ec2-3-84-236-234.compute-1.amazonaws.com;
+    server_name server.domain;
 
      location ^~/static/(.*)$ {
-        alias /home/ubuntu/opentech.fund/opentech/staticfiles/;
+        alias /path/to/application/opentech/staticfiles/;
     }
 
     location / {
@@ -91,8 +89,24 @@ server {
 
 }
 ```
-- symlink to sites-enabled: `sudo ln -s /etc/nginx/sites-available/newfile /etc/nginx/sites-enabled`
-- restart nginx: `sudo systemctl restart nginx`
+
+apply
+```
+server {
+   listen 80;
+   server_name apply.server.domain;
+   location ^~/static/(.*)$ {
+      root /path/to/application/opentech/staticfiles/;
+   }
+   location / {
+      include proxy_params;
+      proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
+```
+Then, symlink these to sites-enabled: `sudo ln -s /etc/nginx/sites-available/main /etc/nginx/sites-enabled && sudo ln -s /etc/nginx/sites-available/apply /etc/nginx/sites-enabled`. Then restart nginx using `sudo systemctl restart nginx`.
+
+**You should then be able to access your application at http://server.domain and http://apply.server.domain.** 
   
    
    
