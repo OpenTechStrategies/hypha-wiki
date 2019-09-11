@@ -8,5 +8,9 @@
 * [Heroku](/OpenTechFund/opentech.fund/wiki/Deployment:-Heroku)
 * [Docker](/OpenTechFund/opentech.fund/wiki/Deployment:-Docker)
 
-**Development**
+**Contributing**
 *  Coming soon..
+*  Setting up a local build
+*  Submitting changes
+*  Updating front-end files
+*  Running tests
