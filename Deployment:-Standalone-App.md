@@ -53,6 +53,7 @@ Then use the following commands to test run the server:
 - `python manage.py migrate --noinput`
 - `python manage.py clear_cache --cache=default --cache=wagtailcache`
 - `python manage.py createsuperuser`
+- `python manage.py wagtailsiteupdate server.domain apply.server.domain 80`
 - `python manage.py runserver` (runs development server at http://127.0.0.1:8000)
 
 You should see the home page of the server. That's great. We can then take the next steps.
