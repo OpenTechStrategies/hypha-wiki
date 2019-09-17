@@ -110,3 +110,27 @@ The [Following Progress page](https://github.com/OpenTechFund/opentech.fund/wiki
 # By theme
 
 ## Epics
+In no particular order, we've listed long-term goals for the app below:
+
+* Completely API-driven allowing multi-medium interface and easier 3rd party system integrations
+* Managers ability to create and customize application workflows (this is currently a developer task)
+* Applicants ability to submit end-to-end encrypted information via submission forms
+* Federation between instances, ability for different entities to collectively engage on a shared fund
+* Automated analysis on submissions for common things reviewers manually research/do (repo health, sentiment, community, etc)
+* Support for collaborative / multi-user applications
+* Proving options for peer review workflow (applicants reviewing other applications), other community-wide inputs, and collective decision making functions
+* Automated reports on round, fund, and instance wide data (kpi's, application trends, etc)
+* Integration of online contract/grant agreement signing, payment processing, and monitoring systems
+* Managers ability to create, customize, and deploy a projects reporting format, workflow, and rhythm
+* Bi-directional engagement via all notification mediums (ability to respond via email, slack, signal)
+* Increase access control for most sensitive areas/functions (ie restrict based on device, security key, etc)
+* Ability to deploy automated tests on 3rd party systems to ensure application functions and access permissions are working
+* Interface that allows managers to set conditions for automatically progressing applications from one state to another
+* Support for instance themes on the frontend
+* Ability for creators of content (applicants and reviews) to control the visibility of their content
+* Content wide support for saving drafts (even for anon applicants) and working offline
+* Integration with discourse for community engagement (receiving answers from FAQ, asking questions, posting comments)
+* Creation of a recommendation engine for assigning reviews to managers and reviewers
+* Fully functional responsive Progressive Web App for mobile/tablets (think you can put on your home screen)
+* Creation of a recommendation engine to provide initial suggestions if submissions are in/out of remit
+* Creation of a prediction engine to indicate an submissions likelihood of progressing  
