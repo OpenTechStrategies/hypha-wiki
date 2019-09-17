@@ -107,9 +107,8 @@ Items not above from the next three or four milestones.
 
 The [Following Progress page](https://github.com/OpenTechFund/opentech.fund/wiki/Following-progress) outlines how one can observe, watch, or follow the progress towards the above goals.
 
-# By theme
+# Long-term goals by theme (epics)
 
-## Epics
 In no particular order, we've listed long-term goals for the app below:
 
 * Completely API-driven allowing multi-medium interface and easier 3rd party system integrations
