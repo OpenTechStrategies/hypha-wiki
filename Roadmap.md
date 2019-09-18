@@ -9,7 +9,7 @@ See progress by reviewing [priority tickets](https://github.com/OpenTechFund/ope
 ### Dev goals
 _From priority tickets within the current milestone ([2019-Q3 +priority](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q3&utf8=%E2%9C%93))_
 
-September
+September - November
 
 Dev Features
 * Side-by-Side View
