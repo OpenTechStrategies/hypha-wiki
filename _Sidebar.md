@@ -15,3 +15,7 @@
 *  Submitting changes
 *  Updating front-end files
 *  Running tests
+
+**Maintaining**
+* [Quarterly milestone rebase](https://github.com/OpenTechFund/opentech.fund/wiki/Quarterly-milestone-rebase) 
+
