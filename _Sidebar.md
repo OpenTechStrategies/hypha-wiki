@@ -5,8 +5,9 @@
 
 **Deployment**
 * [Standalone App](/OpenTechFund/opentech.fund/wiki/Deployment:-Standalone-App)
-* [Heroku](/OpenTechFund/opentech.fund/wiki/Deployment:-Heroku)
 * [Docker](/OpenTechFund/opentech.fund/wiki/Deployment:-Docker)
+* [Heroku](/OpenTechFund/opentech.fund/wiki/Deployment:-Heroku)
+* Scalingo (Coming soon)
 
 **Contributing**
 *  Coming soon..
