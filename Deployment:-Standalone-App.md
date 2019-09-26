@@ -135,6 +135,27 @@ Then, symlink these to sites-enabled: `sudo ln -s /etc/nginx/sites-available/pub
 
 **You should then be able to access your application at http://server.domain and http://apply.server.domain.** 
 
+### Adding SSL using a Let's Encrypt certificate.
+
+It's very easy to add SSL via a Let's Encrypt certificate.
+
+Add the certbot ppa:
+
+`sudo add-apt-repository ppa:certbot/certbot`
+`sudo apt update`
+
+Install certbot for nginx: 
+
+`sudo apt install python-certbot-nginx`
+
+Make sure that the server_name is specified in both nginx configuration files (they should be.)
+
+Then get the certificate:
+
+`sudo certbot --nginx -d server.domain -d apply.server.domain`
+
+Follow the instructions, and you're done.
+
 ### Administration
 
 The Django Administration panel is connected to the 'apply' domain: so access that via http://apply.server.domain/django-admin/ (use the email address and password you set in the `python manage.py createsuperuser` step above.)
