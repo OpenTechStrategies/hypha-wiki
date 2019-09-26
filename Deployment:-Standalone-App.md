@@ -134,3 +134,9 @@ server {
 Then, symlink these to sites-enabled: `sudo ln -s /etc/nginx/sites-available/public /etc/nginx/sites-enabled && sudo ln -s /etc/nginx/sites-available/apply /etc/nginx/sites-enabled`. Then restart nginx using `sudo systemctl restart nginx`.
 
 **You should then be able to access your application at http://server.domain and http://apply.server.domain.** 
+
+### Administration
+
+The Django Administration panel is connected to the 'apply' domain: so access that via http://apply.server.domain/django-admin/ (use the email address and password you set in the `python manage.py createsuperuser` step above.)
+
+The Apply dashboard is here: http://apply.server.domain/dashboard/. The Apply Wagtail admin: http://apply.server.domain/admin
