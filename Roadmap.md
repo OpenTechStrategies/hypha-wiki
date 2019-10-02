@@ -9,25 +9,24 @@ See progress by reviewing [priority tickets](https://github.com/OpenTechFund/ope
 ### Dev goals
 _From priority tickets within the current milestone ([2019-Q3 +priority](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q3&utf8=%E2%9C%93))_
 
-September - November
+October - November
 
 Dev Features
-* Side-by-Side View
-* Reminder function to applicants and staff reviewers to track and manage deadlines 
+* Side-by-Side View [#748](https://github.com/OpenTechFund/opentech.fund/issues/748)
+* Reminder function to applicants and staff reviewers to track and manage deadlines [#1491](https://github.com/OpenTechFund/opentech.fund/issues/1491)
 * Auto populate decision text into determination responses
-* Word/Character Limits 
-* Email text and correspondence
-* Connect submissions that applied to other OTF funds within WebApp
-* Usability/UX research of WebApp
+* Word/Character Limits [#705](https://github.com/OpenTechFund/opentech.fund/issues/705)
+* Connect submissions that applied to other OTF funds within WebApp [#717](https://github.com/OpenTechFund/opentech.fund/issues/717)
 * Streamline communication channels. Example: We platform is fine with help questions, but there are too many communication channels. Slack is not searchable and user friendly. 
 
 SOP
+* Usability/UX research of WebApp
 * Transparent process for prioritizing bug/feature/UX requests
 * Protocol for reporting bug/feature/UX 
 * User manual or documentation on how to use webapp, particularly useful for on-boarding new AC
 * Responsible data policy & security
 
-August 
+August - September
 * Bring back the short proposal form for concept notes that are requesting less than 100k #717
 * Create a new page template called "Results", that can be placed anywhere #1248
 * Update the region scheme to the UN scheme and update all submissions accordingly #1173 
