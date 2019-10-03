@@ -4,6 +4,7 @@
 * [Following Progress](/OpenTechFund/opentech.fund/wiki/Following-progress)
 
 **Deployment**
+* [Local development](/OpenTechFund/opentech.fund/wiki/Local-development-environment)
 * [Standalone App](/OpenTechFund/opentech.fund/wiki/Deployment:-Standalone-App)
 * [Docker](/OpenTechFund/opentech.fund/wiki/Deployment:-Docker)
 * [Heroku](/OpenTechFund/opentech.fund/wiki/Deployment:-Heroku)
