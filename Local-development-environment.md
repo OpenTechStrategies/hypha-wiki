@@ -64,6 +64,8 @@ Install the needed packages:
 $ pip3 install --upgrade virtualenv
 ~~~~
 
+Create the virtual environment, specify the python binary to use and the directory. Then source the activate script to activate the virtual environment.
+
 ~~~~
 $ virtualenv --python=/usr/local/bin/python3 venv/opentech
 $ source venv/opentech/bin/activate
