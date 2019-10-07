@@ -74,7 +74,7 @@ Inside your activated virtual environment you will use plain `python` and `pip` 
 Each time you open up a new shell to work with the app you will need to activate the virtual environment.
 
 ~~~~
-$ cd hypha
+$ cd /path/to/application/hypha
 $ source venv/opentech/bin/activate
 ~~~~
 
