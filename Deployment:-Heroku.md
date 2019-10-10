@@ -25,6 +25,7 @@ Then so the following steps for each environment.
 * BASIC_AUTH_PASSWORD
 * DJANGO_SETTINGS_MODULE
 * EMAIL_HOST
+* ON_HEROKU=true (so correct production settings gets loaded)
 * ORG_LONG_NAME
 * ORG_SHORT_NAME
 * ORG_EMAIL
