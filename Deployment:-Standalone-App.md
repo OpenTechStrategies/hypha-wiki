@@ -24,7 +24,7 @@ Then, you'll want to set up a virtual environment: `virtualenv --python=/usr/bin
 Next, install the required packages using `pip install -r requirements.txt`. You can also install stellar and Werkzeug, but they are not required in production.
 
 - `pip install stellar`
-- `pip install'Werkzeug`
+- `pip install Werkzeug`
 
 
 ### Post-install setup
