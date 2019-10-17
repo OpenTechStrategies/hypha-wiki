@@ -17,7 +17,7 @@ These are the basic packages needed before you can start the installation proces
 - python3-pip - install using  `sudo apt-get install python3-pip`
 - postgresql (version 10.9) use `sudo apt-get install postgresql postgresql-contrib`
 - to install nodejs (version v12.5.0), use nodesource. Add the PPA to your sources list by running this script: `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - then `sudo apt-get install nodejs`
-- gulp (version 4.0.2 CLI version 2.2.0) installed using `sudo npm install -g gulp`
+- gulp-cli (version 4.0.2 CLI version 2.2.0) installed using `sudo npm install -g gulp-cli`
 
 Then, you'll want to set up a virtual environment: `virtualenv --python=/usr/bin/python3 venv/opentech` and `source venv/opentech/bin/activate`
 
