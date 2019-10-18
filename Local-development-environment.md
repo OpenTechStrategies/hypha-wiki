@@ -133,12 +133,25 @@ To drop a database use.
 $ dropdb hypha
 ~~~~
 
-On Linux you might need to run as the "postgres" user first when setting upp Postgres.
+#### Linux installs might require setting up a user
+
+On Linux you might need to run as the "postgres" user first when setting upp Postgres. Use it to create the database and set up a database user. For local development I suggest creating a user with the same name as you account, then you will not need to specify it on every command.
 
 ~~~~
 $ su - postgres
+$ createdb hypha
+$ createuser [your-account-name]
 ~~~~
 
+#### macOS users might need this fix
+
+To make the app find the Postgres socket you might need to update the "unix_socket_directories" setting in the  `postgresql.conf` file.
+
+~~~~
+unix_socket_directories = '/tmp, /var/pgsql_socket'
+~~~~
+
+#### Use stellar for db snapshots
 
 If you installed "stellar" you can use it to take snapshots and restore them.
 
@@ -148,14 +161,6 @@ $ stellar snapshot hypha_2019-10-01
 
 ~~~~
 $ stellar restore hypha_2019-10-01
-~~~~
-
-#### macOS users might need this fix
-
-To make the app find the Postgres socket you might need to update the "unix_socket_directories" setting in the  `postgresql.conf` file.
-
-~~~~
-unix_socket_directories = '/tmp, /var/pgsql_socket'
 ~~~~
 
 
