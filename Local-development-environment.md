@@ -40,7 +40,7 @@ OBS! All examples from now on will use the `hypha.test` domains.
 ### Get the code
 
 ~~~~
-$ git clone git@github.com:OpenTechFund/opentech.fund.git hypha
+$ git clone https://github.com/OpenTechFund/opentech.fund.git hypha
 
 $ cd hypha
 ~~~~
