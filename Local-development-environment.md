@@ -116,28 +116,6 @@ You will also need the gulp task manager. On some systems you might need to run 
 $ npm install -g gulp-cli
 ~~~~
 
-See the `gulpfile.js` file for a complete list of commands. Here are the most common in development.
-
-This will watch all files for changes and build them with maps. It will also run the "collecstatic" command, useful when running the site with a production server and not the built in dev server.
-
-~~~~
-$ gulp watch
-~~~~
-
-If you are working on the React components then it may be worth just using one of the two following commands. They should do the same thing, but the npm command calls Webpack direct.
-
-~~~~
-$ gulp watch:app
-# OR
-$ npm run webpack-watch
-~~~~
-
-To build the assets which get deployed, use the following. The deployment scripts will handle this, and the files should not be committed.
-
-~~~~
-$ gulp build
-~~~~
-
 
 ### The Postgres database
 
@@ -356,6 +334,31 @@ Now you should be able to access the sites on <https://hypha.test/> and <https:/
 * The Apply Wagtail admin: <http://apply.hypha.test/admin/>
 
 Use the email address and password you set in the `createsuperuser` step above to login.
+
+
+### Front end development
+
+See the `gulpfile.js` file for a complete list of commands. Here are the most common in development.
+
+This will watch all sass and js files for changes and build them with css maps. It will also run the "collecstatic" command, useful when running the site with a production server and not the built in dev server.
+
+~~~~
+$ gulp watch
+~~~~
+
+If you are working on the React components then it may be worth just using one of the two following commands. They should do the same thing, but the npm command calls Webpack direct.
+
+~~~~
+$ gulp watch:app
+# OR
+$ npm run webpack-watch
+~~~~
+
+To build the assets which get deployed, use the following. The deployment scripts will handle this, and the files should not be committed.
+
+~~~~
+$ gulp build
+~~~~
 
 
 ### Useful things
