@@ -67,8 +67,8 @@ $ pip3 install --upgrade virtualenv
 Create the virtual environment, specify the python binary to use and the directory. Then source the activate script to activate the virtual environment.
 
 ~~~~
-$ virtualenv --python=/usr/local/bin/python3 venv/opentech
-$ source venv/opentech/bin/activate
+$ virtualenv --python=python3 venv/hypha
+$ source venv/hypha/bin/activate
 ~~~~
 
 Inside your activated virtual environment you will use plain `python` and `pip` commands. Everything inside the virtual environment is python 3 since we specified that when we created it.
