@@ -133,6 +133,13 @@ To drop a database use.
 $ dropdb hypha
 ~~~~
 
+On Linux you might need to run as the "postgres" user first when setting upp Postgres.
+
+~~~~
+$ su - postgres
+~~~~
+
+
 If you installed "stellar" you can use it to take snapshots and restore them.
 
 ~~~~
@@ -181,6 +188,8 @@ SESSION_COOKIE_SAMESITE = None
 If you do not use the app name for the database.
 
 ~~~~
+import dj_database_url
+
 DATABASES = {
     'default': dj_database_url.config(
         conn_max_age=600,
