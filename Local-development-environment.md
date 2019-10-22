@@ -202,7 +202,9 @@ DATABASES = {
     )
 }
 ~~~~
+### Create log directory
 
+`mkdir -p var/log/`
 
 ### Set up Gunicorn
 
