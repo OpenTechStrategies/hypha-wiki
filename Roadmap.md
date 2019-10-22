@@ -1,6 +1,6 @@
 Below is are the projects objectives by time first and then by theme.
 
-November
+November - December
 
 Dev Features
 * django-storages 2.0 will no longer default to public-read 
