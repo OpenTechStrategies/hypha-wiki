@@ -1,15 +1,20 @@
 Below is are the projects objectives by time first and then by theme.
 
-# By time
-## Horizon 1
-**Approx. next month**
+November
 
-See progress by reviewing [priority tickets](https://github.com/OpenTechFund/opentech.fund/labels/priority) for the current milestone ([2019-Q3](https://github.com/OpenTechFund/opentech.fund/milestone/2)) and/or todo list on the [main project board](https://github.com/OpenTechFund/opentech.fund/projects/2). 
+Dev Features
+* django-storages 2.0 will no longer default to public-read 
+* Improve the file upload widget
+* For each fund or lab, add a field in the form for the guide url. If exist, display a button on the fund/lab page as well as the application with link.
+* Submissions in state approved need to editable by applicants but also need to end up being "locked" in a final state
+* Make it possible to add reminders to applications
+* Create unique slack channel for notes
+* The ability for a user to create a custom list of submissions they have access to by providing an option for them to flag/bookmark/follow it on the submission page. this list should show up in a new list at the bottom of their dashboard.
+* Ability for team to edit a determination msg with an option to not re-send the applicant notifications 
+* Remove sections of the determination form that don't have any text from the email that goes to applicants
+* Add a clone/copy function on the admin/funds/applicationform/ listing to create a new application based on a previous one 
 
-### Dev goals
-_From priority tickets within the current milestone ([2019-Q3 +priority](https://github.com/OpenTechFund/opentech.fund/issues?page=2&q=is%3Aopen+is%3Aissue+label%3Apriority+milestone%3A2019-Q3&utf8=%E2%9C%93))_
-
-October - November
+October 
 
 Dev Features
 * Side-by-Side View [#748](https://github.com/OpenTechFund/opentech.fund/issues/748)
