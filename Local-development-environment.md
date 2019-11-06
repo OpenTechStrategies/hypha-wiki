@@ -86,13 +86,15 @@ A tips is to checkout `virtualenvwrapper`. It makes it nicer to work with virtua
 
 ### Install Python packages
 
-All the needed python packages are listed in the `requirements.txt` file. Install them with this command.
+All the needed python packages for production are listed in the `requirements.txt` file. Additional packages for development are listed in `requirements-dev.txt`, it also includes everything from the `requirements.txt` file.
+
+For a development environment you then run:
 
 ~~~~
-$ pip install -r requirements.txt
+$ pip install -r requirements-dev.txt
 ~~~~
 
-If the `requirements.txt` file have been updated you will need to rerun this command to get the updated/added packages.
+If any `requirements*.txt` file have been updated you will need to rerun this command to get the updated/added packages.
 
 Some additional development tools that might come in handy are django-debug-toolbar and stellar. Stellar makes it quick and easy to create database snapshots and restore from them.
 
