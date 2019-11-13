@@ -1,5 +1,5 @@
 **Intro**
-* [About](/OpenTechFund/opentech.fund/wiki)
+* [Home](/OpenTechFund/opentech.fund/wiki)
 * [Roadmap](/OpenTechFund/opentech.fund/wiki/Roadmap)
 * [Following Progress](/OpenTechFund/opentech.fund/wiki/Following-progress)
 
