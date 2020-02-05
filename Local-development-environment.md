@@ -51,25 +51,12 @@ OBS! Everything from now on will happen inside the hypha directory.
 
 ### Python virtual environment
 
-First check if the python 3 version of pip is `pip` or `pip3`.
+Create the virtual environment, specify the python binary to use and the directory. Then source the activate script to activate the virtual environment. The last line tells Django what settings to use.
 
 ~~~~
-pip --version
-~~~~
-
-If it fails or the output mention python 2.x and not python 3.x you will need to use `pip3`. This will be the case on most systems.
-
-Install the needed packages:
-
-~~~~
-$ pip3 install --upgrade virtualenv
-~~~~
-
-Create the virtual environment, specify the python binary to use and the directory. Then source the activate script to activate the virtual environment.
-
-~~~~
-$ virtualenv --python=python3 venv/hypha
+$ python3 -m venv venv/hypha
 $ source venv/hypha/bin/activate
+$ export DJANGO_SETTINGS_MODULE=opentech.settings.dev
 ~~~~
 
 Inside your activated virtual environment you will use plain `python` and `pip` commands. Everything inside the virtual environment is python 3 since we specified that when we created it.
@@ -78,10 +65,9 @@ Each time you open up a new shell to work with the app you will need to activate
 
 ~~~~
 $ cd /path/to/application/hypha
-$ source venv/opentech/bin/activate
+$ source venv/hypha/bin/activate
+$ export DJANGO_SETTINGS_MODULE=opentech.settings.dev
 ~~~~
-
-A tips is to checkout `virtualenvwrapper`. It makes it nicer to work with virtual environments.
 
 
 ### Install Python packages
@@ -302,13 +288,11 @@ server {
 
 ### Finally, the app itself
 
-Start by specifying what settings file is to be used.
+Start by specifying what settings file is to be used (if you have not already done this, see above).
 
 ~~~~
 $ export DJANGO_SETTINGS_MODULE=opentech.settings.dev
 ~~~~
-
-If you use `virtualenvwrapper` you get `postactivate` and `postdeactivate` scripts that you can use to set and unset environment variables automatically.
 
 Then use the following commands to set up the app:
 
