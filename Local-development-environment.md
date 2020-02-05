@@ -80,13 +80,6 @@ $ pip install -r requirements-dev.txt
 
 If any `requirements*.txt` file have been updated you will need to rerun this command to get the updated/added packages.
 
-Some additional development tools that might come in handy are django-debug-toolbar and stellar. Stellar makes it quick and easy to create database snapshots and restore from them.
-
-~~~~
-$ pip install --upgrade django-debug-toolbar
-$ pip install --upgrade stellar
-~~~~
-
 
 ### Install Node packages
 
