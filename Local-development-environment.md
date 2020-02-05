@@ -2,8 +2,6 @@
 
 ## Local development environment
 
-OBS! Every time you see "hypha", replace with your site name.
-
 
 ### Requirements
 
