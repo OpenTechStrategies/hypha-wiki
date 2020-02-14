@@ -80,6 +80,8 @@ $ pip install -r requirements-dev.txt
 
 If any `requirements*.txt` file have been updated you will need to rerun this command to get the updated/added packages.
 
+**Note for MacOS users:** On more recent systems like Mojave, you may need to run `sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /` before installing with pip for psycopg2 to install correctly.
+
 
 ### Install Node packages
 
@@ -199,13 +201,13 @@ Quit the server with `ctrl-c` when you done testing.
 
 * `opentech.wsgi:application` links it up to the app via the `opentech/wsgi.py` file.
 * `--env …` tells it what settings to use, for development your want "dev" settings.
-* `--bind …` makes it listen on localhost port 90001. Socket works as well but on macOS they have given me issues, while tcp connections always seems to just work.
+* `--bind …` makes it listen on localhost port 9001. Socket works as well but on macOS they have given me issues, while tcp connections always seems to just work.
 
 
 
 ### Set up Apache or Nginx
 
-Set up new vhost for Apache or Nginx. WE let the web server handle static files and proxy everything else over to Gunicorn.
+Set up new vhost for Apache or Nginx. We let the web server handle static files and proxy everything else over to Gunicorn.
 
 
 #### Apache
@@ -275,7 +277,13 @@ server {
 }
 ```
 
-
+**Note for MacOS users:** You may need to create a `proxy_params` file in `/usr/local/etc/nginx`. Some good defaults include:
+```
+proxy_set_header Host $http_host;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header X-Forwarded-Proto $scheme;
+```
 
 ### Finally, the app itself
 
@@ -310,6 +318,8 @@ Collect all the static files.
 ~~~~
 $ python manage.py collectstatic --noinput
 ~~~~
+
+**NOTE:** you may need to `mkdir static_compiled`
 
 Set the addresses and ports of the two wagtail sites.
 
