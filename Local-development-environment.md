@@ -328,7 +328,7 @@ $ python manage.py wagtailsiteupdate hypha.test apply.hypha.test 80
 ~~~~
 
 
-Now you should be able to access the sites on <https://hypha.test/> and <https://apply.hypha.test/>
+Now you should be able to access the sites on <http://hypha.test/> and <http://apply.hypha.test/>
 
 #### Administration
 
