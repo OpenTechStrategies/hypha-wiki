@@ -375,13 +375,12 @@ set -euo pipefail
 
 WORKERS=3
 PORT=${2:-9001}
-PROJECT=$(cat "${VIRTUAL_ENV}/.project")
-WSGI=$(find "${PROJECT}" -name wsgi.py)
+WSGI=$(find . -name wsgi.py -not -path "./venv/*")
 WSGI=${WSGI%/*}
 NAME=${WSGI##*/}
 SETTINGS="${NAME}.settings.${3:-dev}"
-RUNDIR="${PROJECT}/var/run"
-LOGDIR="${PROJECT}/var/log"
+RUNDIR="./var/run"
+LOGDIR="./var/log"
 SOCK="${RUNDIR}/${NAME}-gunicorn.sock"
 PID="${RUNDIR}/${NAME}-gunicorn.pid"
 LOGFILE="${LOGDIR}/${NAME}-gunicorn.log"
@@ -397,7 +396,7 @@ function start_gunicorn {
     mkdir -p "${LOGDIR}"
   fi
 
-  gunicorn \
+  exec gunicorn \
       ${NAME}.wsgi:application \
       --env DJANGO_SETTINGS_MODULE=${SETTINGS} \
       --pid ${PID} \
