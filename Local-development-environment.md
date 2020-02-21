@@ -24,7 +24,7 @@ For Windows [Chocolatey](https://chocolatey.org/) seems popular but we have no e
 
 You will need two domain to run this app. One for the public site and one for the apply site.
 
-Add this to your `/etc/hosts` file. Replace "hypha" with your site name.
+Add this to your `/etc/hosts` file. (Feel free to use another name but then remember to use it in all the commands below.)
 
 ~~~~
 127.0.0.1 hypha.test
@@ -171,7 +171,7 @@ CSRF_COOKIE_SAMESITE = None
 SESSION_COOKIE_SAMESITE = None
 ~~~~
 
-If you do not use the app name for the database.
+If you do not use the app name for the database. (The default app name is still "opentech" but that will change in the future.)
 
 ~~~~
 import dj_database_url
@@ -183,6 +183,7 @@ DATABASES = {
     )
 }
 ~~~~
+
 ### Create log directory
 
 `mkdir -p var/log/`
@@ -204,11 +205,11 @@ Quit the server with `ctrl-c` when you done testing.
 * `--bind …` makes it listen on localhost port 9001. Socket works as well but on macOS they have given me issues, while tcp connections always seems to just work.
 
 
-
 ### Set up Apache or Nginx
 
 Set up new vhost for Apache or Nginx. We let the web server handle static files and proxy everything else over to Gunicorn.
 
+The examples uses port 80 for web server and port 9001 for WSGI, feel free to change that if needed. You maybe are already running other services on these ports or prefer to not run the web server as root and want a port above 1024.
 
 #### Apache
 
@@ -253,7 +254,6 @@ Set up new vhost for Apache or Nginx. We let the web server handle static files 
 </VirtualHost>
 ~~~~
 
-
 #### Nginx
 
 ```
@@ -270,20 +270,40 @@ server {
     }
 
     location / {
-        include proxy_params;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
         proxy_pass http://127.0.0.1:9001/;
     }
 
 }
 ```
 
-**Note for MacOS users:** You may need to create a `proxy_params` file in `/usr/local/etc/nginx`. Some good defaults include:
-```
-proxy_set_header Host $http_host;
-proxy_set_header X-Real-IP $remote_addr;
-proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-proxy_set_header X-Forwarded-Proto $scheme;
-```
+### Front end development
+
+See the `gulpfile.js` file for a complete list of commands. Here are the most common in development.
+
+This will watch all sass and js files for changes and build them with css maps. It will also run the "collecstatic" command, useful when running the site with a production server and not the built in dev server.
+
+~~~~
+$ gulp watch
+~~~~
+
+If you are working on the React components then it may be worth just using one of the two following commands. They should do the same thing, but the npm command calls Webpack direct.
+
+~~~~
+$ gulp watch:app
+# OR
+$ npm run webpack-watch
+~~~~
+
+To build the assets which get deployed, use the following. The deployment scripts will handle this, and the files should not be committed.
+
+~~~~
+$ gulp build
+~~~~
+
 
 ### Finally, the app itself
 
@@ -319,7 +339,7 @@ Collect all the static files.
 $ python manage.py collectstatic --noinput
 ~~~~
 
-**NOTE:** you may need to `mkdir static_compiled`
+(If this command complain about missing `static_compiled` directory, run the gulp command above first.)
 
 Set the addresses and ports of the two wagtail sites.
 
@@ -330,6 +350,7 @@ $ python manage.py wagtailsiteupdate hypha.test apply.hypha.test 80
 
 Now you should be able to access the sites on <http://hypha.test/> and <http://apply.hypha.test/>
 
+
 #### Administration
 
 * The Django Administration panel: <http://apply.hypha.test/django-admin/>
@@ -337,31 +358,6 @@ Now you should be able to access the sites on <http://hypha.test/> and <http://a
 * The Apply Wagtail admin: <http://apply.hypha.test/admin/>
 
 Use the email address and password you set in the `createsuperuser` step above to login.
-
-
-### Front end development
-
-See the `gulpfile.js` file for a complete list of commands. Here are the most common in development.
-
-This will watch all sass and js files for changes and build them with css maps. It will also run the "collecstatic" command, useful when running the site with a production server and not the built in dev server.
-
-~~~~
-$ gulp watch
-~~~~
-
-If you are working on the React components then it may be worth just using one of the two following commands. They should do the same thing, but the npm command calls Webpack direct.
-
-~~~~
-$ gulp watch:app
-# OR
-$ npm run webpack-watch
-~~~~
-
-To build the assets which get deployed, use the following. The deployment scripts will handle this, and the files should not be committed.
-
-~~~~
-$ gulp build
-~~~~
 
 
 ### Useful things
