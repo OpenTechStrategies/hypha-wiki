@@ -54,7 +54,7 @@ Create the virtual environment, specify the python binary to use and the directo
 ~~~~
 $ python3 -m venv venv/hypha
 $ source venv/hypha/bin/activate
-$ export DJANGO_SETTINGS_MODULE=opentech.settings.dev
+$ export DJANGO_SETTINGS_MODULE=hypha.settings.dev
 ~~~~
 
 Inside your activated virtual environment you will use plain `python` and `pip` commands. Everything inside the virtual environment is python 3 since we specified that when we created it.
@@ -64,7 +64,7 @@ Each time you open up a new shell to work with the app you will need to activate
 ~~~~
 $ cd /path/to/application/hypha
 $ source venv/hypha/bin/activate
-$ export DJANGO_SETTINGS_MODULE=opentech.settings.dev
+$ export DJANGO_SETTINGS_MODULE=hypha.settings.dev
 ~~~~
 
 
@@ -154,7 +154,7 @@ When you use the "dev" settings it will included all the setting you put in `loc
 Copy the local settings example file.
 
 ~~~~
-$ cp -p opentech/settings/local.py.example opentech/settings/local.py
+$ cp -p hypha/settings/local.py.example hypha/settings/local.py
 ~~~~
 
 You most likely want to set these:
@@ -171,7 +171,7 @@ CSRF_COOKIE_SAMESITE = None
 SESSION_COOKIE_SAMESITE = None
 ~~~~
 
-If you do not use the app name for the database. (The default app name is still "opentech" but that will change in the future.)
+If you do not use the app name for the database.
 
 ~~~~
 import dj_database_url
@@ -179,7 +179,7 @@ import dj_database_url
 DATABASES = {
     'default': dj_database_url.config(
         conn_max_age=600,
-        default='postgres:///hypha'
+        default='postgres:///your_db_name'
     )
 }
 ~~~~
@@ -195,12 +195,12 @@ Gunicorn is installed inside the virtual enviroment since it's listed in `requir
 At the bottom of this file you find a handy script for Gunicorn. For a quick test you can run this command from your site directory.
 
 ~~~~
-$ gunicorn opentech.wsgi:application --env DJANGO_SETTINGS_MODULE=opentech.settings.dev --bind 127.0.0.1:9001
+$ gunicorn hypha.wsgi:application --env DJANGO_SETTINGS_MODULE=hypha.settings.dev --bind 127.0.0.1:9001
 ~~~~
 
 Quit the server with `ctrl-c` when you done testing.
 
-* `opentech.wsgi:application` links it up to the app via the `opentech/wsgi.py` file.
+* `hypha.wsgi:application` links it up to the app via the `hypha/wsgi.py` file.
 * `--env …` tells it what settings to use, for development your want "dev" settings.
 * `--bind …` makes it listen on localhost port 9001. Socket works as well but on macOS they have given me issues, while tcp connections always seems to just work.
 
@@ -217,12 +217,12 @@ The examples uses port 80 for web server and port 9001 for WSGI, feel free to ch
 <VirtualHost 127.0.0.1:80>
   ServerName hypha.test
   ServerAlias apply.hypha.test
-  DocumentRoot "/path/to/application/hypha/opentech"
+  DocumentRoot "/path/to/application/hypha/hypha"
 
 
   Alias /media/ /path/to/application/hypha/media/
   Alias /static/ /path/to/application/hypha/static/
-  Alias /static_src/ /path/to/application/hypha/opentech/static_src/
+  Alias /static_src/ /path/to/application/hypha/hypha/static_src/
 
   <Directory "/path/to/application/hypha/static">
     Require all granted
@@ -232,7 +232,7 @@ The examples uses port 80 for web server and port 9001 for WSGI, feel free to ch
     Require all granted
   </Directory>
 
-  <Directory "/path/to/application/hypha/opentech/static_src">
+  <Directory "/path/to/application/hypha/hypha/static_src">
     Require all granted
   </Directory>
 
@@ -310,7 +310,7 @@ $ gulp build
 Start by specifying what settings file is to be used (if you have not already done this, see above).
 
 ~~~~
-$ export DJANGO_SETTINGS_MODULE=opentech.settings.dev
+$ export DJANGO_SETTINGS_MODULE=hypha.settings.dev
 ~~~~
 
 Then use the following commands to set up the app:
