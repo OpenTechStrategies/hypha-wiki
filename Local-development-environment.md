@@ -100,7 +100,7 @@ $ npm install -g gulp-cli
 
 ### The Postgres database
 
-If the `createdb`and `dropdb` is not available you will need to add the Postgres bin directory to you path or call the commands with complete path.
+If the `createdb`and `dropdb` is not available you will need to add the Postgres bin directory to your path or call the commands with complete path.
 
 Create a database for the app.
 
@@ -116,7 +116,7 @@ $ dropdb hypha
 
 #### Linux installs might require setting up a user
 
-On Linux you might need to run as the "postgres" user first when setting upp Postgres. Use it to create the database and set up a database user. For local development I suggest creating a user with the same name as you account, then you will not need to specify it on every command.
+On Linux you might need to run as the "postgres" user first when setting up Postgres. Use it to create the database and set up a database user. For local development I suggest creating a user with the same name as your account, then you will not need to specify it on every command.
 
 ~~~~
 $ su - postgres
@@ -147,7 +147,7 @@ $ stellar restore hypha_2019-10-01
 
 ### Local settings
 
-On production it's recommend to use environment variables for all settings. For local development putting them in a file is however convenient.
+On production it's recommended to use environment variables for all settings. For local development putting them in a file is however convenient.
 
 When you use the "dev" settings it will included all the setting you put in `local.py`.
 
@@ -190,7 +190,7 @@ DATABASES = {
 
 ### Set up Gunicorn
 
-Gunicorn is installed inside the virtual enviroment since it's listed in `requirements.txt`.
+Gunicorn is installed inside the virtual environment since it's listed in `requirements.txt`.
 
 At the bottom of this file you find a handy script for Gunicorn. For a quick test you can run this command from your site directory.
 
