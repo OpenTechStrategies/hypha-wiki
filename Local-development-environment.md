@@ -132,6 +132,7 @@ To make the app find the Postgres socket you might need to update the "unix_sock
 unix_socket_directories = '/tmp, /var/pgsql_socket'
 ~~~~
 
+
 #### Use stellar for db snapshots
 
 If you installed "stellar" you can use it to take snapshots and restore them.
@@ -313,7 +314,25 @@ Start by specifying what settings file is to be used (if you have not already do
 $ export DJANGO_SETTINGS_MODULE=hypha.settings.dev
 ~~~~
 
-Then use the following commands to set up the app:
+Then decide if you want to start with some demo content or with an empty db.
+
+
+#### Load the sandbox db to get some demo content
+
+There is a `/public/sandbox_db.dump` file that has some demo content to get you started. Load it in with this command.
+
+~~~~
+$ pg_restore --verbose --clean --if-exists --no-acl --no-owner -d hypha public/sandbox_db.dump
+~~~~
+
+It's not always completely up to date so run:
+
+~~~~
+$ python manage.py migrate --noinput
+~~~~
+
+#### Or create a db from scratch.
+
 
 Create the cache tables.
 
@@ -349,6 +368,21 @@ $ python manage.py wagtailsiteupdate hypha.test apply.hypha.test 80
 
 
 Now you should be able to access the sites on <http://hypha.test/> and <http://apply.hypha.test/>
+
+
+#### Run tests
+
+Hypha has specific settings for testing so specify them when you run the "test" command.
+
+~~~~
+$ python manage.py test --settings=hypha.settings.test
+~~~~
+
+If you need to rerun the tests several times this will speed them up considerably.
+
+~~~~
+$ python manage.py test --parallel --keepdb --settings=hypha.settings.test
+~~~~
 
 
 #### Administration
