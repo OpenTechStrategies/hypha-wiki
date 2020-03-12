@@ -293,6 +293,12 @@ $ gulp watch
 
 If you are working on the React components then it may be worth just using one of the two following commands. They should do the same thing, but the npm command calls Webpack direct.
 
+First you also need to set "API_BASE_URL" to the correct value.
+
+~~~~
+$ export API_BASE_URL='http://apply.hypha.test/api'
+~~~~
+
 ~~~~
 $ gulp watch:app
 # OR
