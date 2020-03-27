@@ -10,16 +10,13 @@
 * [Heroku](/OpenTechFund/opentech.fund/wiki/Deployment:-Heroku)
 * Scalingo (Coming soon)
 
-**Development**
-
-* [Local development](/OpenTechFund/opentech.fund/wiki/Local-development-environment)
-* [System-principles](/OpenTechFund/hypha/wiki/System-principles)
-
 **Contributing**
 
-*  [Submitting changes](/OpenTechFund/hypha/wiki/Submitting-changes)
-*  Updating front-end files
-*  Running tests
+* [Local development setup](/OpenTechFund/opentech.fund/wiki/Local-development-environment)
+* [Submitting changes](/OpenTechFund/hypha/wiki/Submitting-changes)
+* [System-principles](/OpenTechFund/hypha/wiki/System-principles)
+* Updating front-end files
+* Running tests
 
 **Maintaining**
 
