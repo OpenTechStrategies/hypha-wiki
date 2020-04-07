@@ -1,9 +1,7 @@
-# OTF Application Installation Process
-
-## Local development environment
+# Setup a local development environment from scratch for Hypha
 
 
-### Requirements
+## Requirements
 
 Make sure you have these things installed on your system:
 
@@ -20,7 +18,7 @@ On Linux install them with your normal package manager. On macOS [Homebrew](http
 For Windows [Chocolatey](https://chocolatey.org/) seems popular but we have no experience with Windows.
 
 
-### Domains for local development
+## Domains for local development
 
 You will need two domain to run this app. One for the public site and one for the apply site.
 
@@ -36,7 +34,7 @@ The "[test](https://en.wikipedia.org/wiki/.test)" TLD is safe to use, it's reser
 OBS! All examples from now on will use the `hypha.test` domains.
 
 
-### Get the code
+## Get the code
 
 ~~~~
 $ git clone git@github.com:OpenTechFund/hypha.git hypha
@@ -47,7 +45,7 @@ $ cd hypha
 OBS! Everything from now on will happen inside the hypha directory.
 
 
-### Python virtual environment
+## Python virtual environment
 
 Create the virtual environment, specify the python binary to use and the directory. Then source the activate script to activate the virtual environment. The last line tells Django what settings to use.
 
@@ -68,7 +66,7 @@ $ export DJANGO_SETTINGS_MODULE=hypha.settings.dev
 ~~~~
 
 
-### Install Python packages
+## Install Python packages
 
 All the needed python packages for production are listed in the `requirements.txt` file. Additional packages for development are listed in `requirements-dev.txt`, it also includes everything from the `requirements.txt` file.
 
@@ -83,7 +81,7 @@ If any `requirements*.txt` file have been updated you will need to rerun this co
 **Note for MacOS users:** On more recent systems like Mojave, you may need to run `sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /` before installing with pip for psycopg2 to install correctly.
 
 
-### Install Node packages
+## Install Node packages
 
 All the needed Node packages are listed in `package.json`. Install them with this command.
 
@@ -98,7 +96,7 @@ $ npm install -g gulp-cli
 ~~~~
 
 
-### The Postgres database
+## The Postgres database
 
 If the `createdb`and `dropdb` is not available you will need to add the Postgres bin directory to your path or call the commands with complete path.
 
@@ -114,7 +112,7 @@ To drop a database use.
 $ dropdb hypha
 ~~~~
 
-#### Linux installs might require setting up a user
+### Linux installs might require setting up a user
 
 On Linux you might need to run as the "postgres" user first when setting up Postgres. Use it to create the database and set up a database user. For local development I suggest creating a user with the same name as your account, then you will not need to specify it on every command.
 
@@ -124,7 +122,7 @@ $ createdb hypha
 $ createuser [your-account-name]
 ~~~~
 
-#### macOS users might need this fix
+### macOS users might need this fix
 
 To make the app find the Postgres socket you might need to update the "unix_socket_directories" setting in the  `postgresql.conf` file.
 
@@ -133,7 +131,7 @@ unix_socket_directories = '/tmp, /var/pgsql_socket'
 ~~~~
 
 
-#### Use stellar for db snapshots
+### Use stellar for db snapshots
 
 If you installed "stellar" you can use it to take snapshots and restore them.
 
@@ -146,7 +144,7 @@ $ stellar restore hypha_2019-10-01
 ~~~~
 
 
-### Local settings
+## Local settings
 
 On production it's recommended to use environment variables for all settings. For local development putting them in a file is however convenient.
 
@@ -185,11 +183,11 @@ DATABASES = {
 }
 ~~~~
 
-### Create log directory
+## Create log directory
 
 `mkdir -p var/log/`
 
-### Set up Gunicorn
+## Set up Gunicorn
 
 Gunicorn is installed inside the virtual environment since it's listed in `requirements.txt`.
 
@@ -206,13 +204,13 @@ Quit the server with `ctrl-c` when you done testing.
 * `--bind …` makes it listen on localhost port 9001. Socket works as well but on macOS they have given me issues, while tcp connections always seems to just work.
 
 
-### Set up Apache or Nginx
+## Set up Apache or Nginx
 
 Set up new vhost for Apache or Nginx. We let the web server handle static files and proxy everything else over to Gunicorn.
 
 The examples uses port 80 for web server and port 9001 for WSGI, feel free to change that if needed. You maybe are already running other services on these ports or prefer to not run the web server as root and want a port above 1024.
 
-#### Apache
+### Apache
 
 ~~~~
 <VirtualHost 127.0.0.1:80>
@@ -255,7 +253,7 @@ The examples uses port 80 for web server and port 9001 for WSGI, feel free to ch
 </VirtualHost>
 ~~~~
 
-#### Nginx
+### Nginx
 
 ```
 server {
@@ -281,7 +279,7 @@ server {
 }
 ```
 
-### Front end development
+## Front end development
 
 See the `gulpfile.js` file for a complete list of commands. Here are the most common in development.
 
@@ -312,7 +310,7 @@ $ gulp build
 ~~~~
 
 
-### Finally, the app itself
+## Finally, the app itself
 
 Start by specifying what settings file is to be used (if you have not already done this, see above).
 
@@ -323,7 +321,7 @@ $ export DJANGO_SETTINGS_MODULE=hypha.settings.dev
 Then decide if you want to start with some demo content or with an empty db.
 
 
-#### Load the sandbox db to get some demo content
+### Load the sandbox db to get some demo content
 
 There is a `/public/sandbox_db.dump` file that has some demo content to get you started. Load it in with this command.
 
@@ -337,7 +335,7 @@ It's not always completely up to date so run:
 $ python manage.py migrate --noinput
 ~~~~
 
-#### Or create a db from scratch.
+### Or create a db from scratch.
 
 
 Create the cache tables.
@@ -376,7 +374,7 @@ $ python manage.py wagtailsiteupdate hypha.test apply.hypha.test 80
 Now you should be able to access the sites on <http://hypha.test/> and <http://apply.hypha.test/>
 
 
-#### Run tests
+### Run tests
 
 Hypha has specific settings for testing so specify them when you run the "test" command.
 
@@ -391,7 +389,7 @@ $ python manage.py test --parallel --keepdb --settings=hypha.settings.test
 ~~~~
 
 
-#### Administration
+### Administration
 
 * The Django Administration panel: <http://apply.hypha.test/django-admin/>
 * The Apply dashboard: <http://apply.hypha.test/dashboard/>
@@ -400,7 +398,7 @@ $ python manage.py test --parallel --keepdb --settings=hypha.settings.test
 Use the email address and password you set in the `createsuperuser` step above to login.
 
 
-### Useful things
+## Useful things
 
 Script to start/stop/restart gunicorn:
 
