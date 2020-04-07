@@ -33,7 +33,9 @@ $ cd hypha
 OBS! Everything from now on will happen inside the hypha directory.
 
 
-## Build the Docker images
+## Docker
+
+### Build the Docker images
 
 Move to the "docker" directory.
 
@@ -41,17 +43,40 @@ Move to the "docker" directory.
 $ cd docker
 ~~~~
 
-Run the docker compose command to build the images.
+Run the docker compose command to build the images. This will take some time.
+
+If you need to rebuild the images to get a later version just run the "build" again.
 
 ~~~~
 $ docker-compose build
 ~~~~
 
-This will take some time.
 
-Then it's time to start the docker containers.
+### Start the docker environment
+
+To start the docker containers you use the "up" command. This command you will use each time you want to start up and use this docker environment.
 
 ~~~~
 $ docker-compose up
 ~~~~
 
+
+### Access the docker environment
+
+Go to [http://hypha.test:8090/](http://hypha.test:8090/)
+
+
+### Run commands in  the docker environment
+
+To get bash shell on the container that runs the Django app, use this command.
+
+~~~~
+docker-compose exec py bash
+~~~~
+
+Here you can issue django commands as normal.
+
+
+### Stop the docker environment.
+
+Press `ctrl+c` in the terminal window.
