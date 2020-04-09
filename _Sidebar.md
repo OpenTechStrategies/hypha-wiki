@@ -16,6 +16,7 @@
 * [Local development setup from scratch](/OpenTechFund/opentech.fund/wiki/Local-development-environment-from-scratch)
 * [Submitting changes](/OpenTechFund/hypha/wiki/Submitting-changes)
 * [System principles](/OpenTechFund/hypha/wiki/System-principles)
+* [Implementation Details](/OpenTechFund/hypha/wiki/Implementation)
 * Updating front-end files
 * [Writing and Running tests](/OpenTechFund/hypha/wiki/Testing)
 
