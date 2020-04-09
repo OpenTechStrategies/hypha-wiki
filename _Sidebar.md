@@ -17,7 +17,7 @@
 * [Submitting changes](/OpenTechFund/hypha/wiki/Submitting-changes)
 * [System principles](/OpenTechFund/hypha/wiki/System-principles)
 * Updating front-end files
-* Running tests
+* [Writing and Running tests](/OpenTechFund/hypha/wiki/Testing)
 
 **Maintaining**
 
