@@ -29,7 +29,7 @@ Add this to your `/etc/hosts` file. (Feel free to use another name but then reme
 127.0.0.1 apply.hypha.test
 ~~~~
 
-The "[test](https://en.wikipedia.org/wiki/.test)" TLD is safe to use, it's reserved testing purposes.
+The "[test](https://en.wikipedia.org/wiki/.test)" TLD is safe to use, it's reserved for testing purposes.
 
 OBS! All examples from now on will use the `hypha.test` domains.
 
