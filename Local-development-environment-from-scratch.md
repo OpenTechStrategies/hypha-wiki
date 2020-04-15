@@ -8,7 +8,7 @@ Make sure you have these things installed on your system:
 - Git
 - Python 3.6.x or 3.7.x
 - Pip (to install python packages)
-- PostgreSQL 10.x (later might work as well)
+- PostgreSQL 12.x (10.x and 11.x work as well)
     - libpq-dev (on Linux at least)
 - Apache or Nginx
 - Node 10.x (later might work as well)
