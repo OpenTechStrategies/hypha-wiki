@@ -10,14 +10,14 @@ Recent version of [Docker](https://www.docker.com/get-started).
 
 You will need two domain to run this app. One for the public site and one for the apply site.
 
-Add this to your `/etc/hosts` file. (Feel free to use another name but then remember to use it in all the commands below.)
+Add this to your `/etc/hosts` file.
 
 ~~~~
 127.0.0.1 hypha.test
 127.0.0.1 apply.hypha.test
 ~~~~
 
-The "[test](https://en.wikipedia.org/wiki/.test)" TLD is safe to use, it's reserved testing purposes.
+The "[test](https://en.wikipedia.org/wiki/.test)" TLD is safe to use, it's reserved for testing purposes.
 
 OBS! All examples from now on will use the `hypha.test` domains.
 
