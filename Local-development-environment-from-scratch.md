@@ -326,7 +326,7 @@ Then decide if you want to start with some demo content or with an empty db.
 There is a `/public/sandbox_db.dump` file that has some demo content to get you started. Load it in with this command.
 
 ~~~~
-$ pg_restore --verbose --clean --if-exists --no-acl --no-owner -d hypha public/sandbox_db.dump
+$ pg_restore --verbose --clean --if-exists --no-acl --no-owner --dbname=hypha public/sandbox_db.dump
 ~~~~
 
 It's not always completely up to date so run:
