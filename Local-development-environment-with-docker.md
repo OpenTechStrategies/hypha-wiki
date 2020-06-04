@@ -110,6 +110,15 @@ Then download the sandbox db dump from Github.
 wget https://github.com/OpenTechFund/opentech.fund/raw/sandbox/public/sandbox_db.dump
 ~~~~
 
+Before being able to work on this database, you have to drop and prevent any other connections to it. 
+
+~~~
+psql
+# REVOKE CONNECT ON DATABASE hypha FROM public;
+# SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = 'hypha';
+# \q
+~~~
+
 With this done, drop and then create the hypha database and run the pg restore command like this.
 
 ~~~
