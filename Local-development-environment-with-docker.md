@@ -76,7 +76,44 @@ docker-compose exec py bash
 
 Here you can issue django commands as normal.
 
+To get a shell on the container that runs Postgres, use this command.
+
+~~~~
+docker-compose exec db bash
+~~~~
 
 ### Stop the docker environment.
 
 Press `ctrl+c` in the terminal window.
+
+
+## Restore a database dump in Docker
+
+We will use the "public/sandbox_db.dump" for this example. That is a good start in any case, you get some example content etc.
+
+First get a shell on the db container.
+
+~~~~
+docker-compose exec db bash
+~~~~
+
+Then in that shell you need to install `wget` to download the db dump.
+
+~~~~
+apt update
+apt install wget
+~~~~
+
+Then download the sandbox db dump from Github.
+
+~~~~
+wget https://github.com/OpenTechFund/opentech.fund/raw/sandbox/public/sandbox_db.dump
+~~~~
+
+With this done, drop and then create the hypha database and run the pg restore command like this.
+
+~~~
+dropdb --user=hypha hypha
+createdb --user=hypha hypha
+pg_restore --verbose --clean --if-exists --no-acl --no-owner --dbname=hypha --username=hypha sandbox_db.dump
+~~~
