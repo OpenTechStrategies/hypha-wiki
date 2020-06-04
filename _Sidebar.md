@@ -8,7 +8,7 @@
 * [Standalone App](/OpenTechFund/hypha/wiki/Deployment:-Standalone-App)
 * [Docker](/OpenTechFund/hypha/wiki/Deployment:-Docker)
 * [Heroku](/OpenTechFund/hypha/wiki/Deployment:-Heroku)
-* Scalingo (Coming soon)
+* Scalingo (Some day)
 
 **Contributing**
 
