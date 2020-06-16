@@ -74,7 +74,9 @@ To get bash shell on the container that runs the Django app, use this command.
 docker-compose exec py bash
 ~~~~
 
-Here you can issue django commands as normal.
+Here you can issue django commands as normal. You might want to change the user - the default is circleci, but most of the code is owned by the user 'node'. To do that:
+
+`docker-compose exec -u node py bash`
 
 To get a shell on the container that runs Postgres, use this command.
 
