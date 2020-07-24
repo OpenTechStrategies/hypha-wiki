@@ -15,8 +15,8 @@ This process was tested on Ubuntu 18.04LTS. It should work on any Debian-based s
 These are the basic packages needed before you can start the installation process.
 
 - python3-pip - install using  `sudo apt-get install python3-pip`
-- postgresql (version 10.9) use `sudo apt-get install postgresql postgresql-contrib`
-- to install nodejs (version v12.5.0), use nodesource. Add the PPA to your sources list by running this script: `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - then `sudo apt-get install nodejs`
+- postgresql (version 10.9) use `sudo apt-get install postgresql postgresql-contrib postgresql-server-dev-11`
+- to install nodejs (version v12.5.0), use nodesource. Add the PPA to your sources list by running this script: `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -` then `sudo apt-get install nodejs`
 - gulp-cli (version 4.0.2 CLI version 2.2.0) installed using `sudo npm install -g gulp-cli`
 
 Then, you'll want to set up a virtual environment: `virtualenv --python=/usr/bin/python3 venv/opentech` and `source venv/opentech/bin/activate`
@@ -34,7 +34,7 @@ You'll want to install npm, `npm install`, and then deploy gulp using `gulp depl
 Postgresql is the database used. Start the server you installed above using `sudo service postgresql start`, then log into the postgres superuser, `sudo su - postgres` and enter the postgresql cli with `psql`. In the CLI, use these commands:
 
 - `CREATE DATABASE opentech;`
-- `CREATE USER [linux username] WITH SUPERUSER LOGIN`
+- `CREATE USER [linux username] WITH SUPERUSER LOGIN;`
 - Also, make sure that this user has trust access in pg_hba.conf.
 
 These settings can be restricted later as required.
