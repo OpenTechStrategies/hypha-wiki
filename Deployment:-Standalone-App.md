@@ -17,23 +17,46 @@ These are the basic packages needed before you can start the installation proces
 - python3-pip - install using  `sudo apt-get install python3-pip`
 - postgresql (version 10.9) use `sudo apt-get install postgresql postgresql-contrib postgresql-server-dev-11`
 - to install nodejs (version v12.5.0), use nodesource. Add the PPA to your sources list by running this script: `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -` then `sudo apt-get install nodejs`
-- gulp-cli (version 4.0.2 CLI version 2.2.0) installed using `sudo npm install -g gulp-cli`
 
-Then, you'll want to set up a virtual environment: `virtualenv --python=/usr/bin/python3 venv/opentech` and `source venv/opentech/bin/activate`
+### Python virtual environment
 
-Next, install the required packages using `pip install -r requirements.txt`. You can also install stellar and Werkzeug, but they are not required in production.
+Create the virtual environment, specify the python binary to use and the directory. Then source the activate script to activate the virtual environment. The last line tells Django what settings to use.
 
-- `pip install stellar`
-- `pip install Werkzeug`
+~~~~
+$ python3 -m venv venv/hypha
+$ source venv/hypha/bin/activate
+$ export DJANGO_SETTINGS_MODULE=hypha.settings.production
+~~~~
 
+Inside your activated virtual environment you will use plain `python` and `pip` commands. Everything inside the virtual environment is python 3 since we specified that when we created it.
 
-### Post-install setup
+### Install Python packages
 
-You'll want to install npm, `npm install`, and then deploy gulp using `gulp deploy`.
+Next, install the required packages using:
+
+~~~~
+$ pip install -r requirements.txt
+~~~~
+
+### Install Node packages
+
+All the needed Node packages are listed in `package.json`. Install them with this command.
+
+~~~~
+$ npm install
+~~~~
+
+You will also need the gulp task manager. On some systems you might need to run this command with `sudo`.
+
+~~~~
+$ npm install -g gulp-cli
+~~~~
+
+### The Postgres database
 
 Postgresql is the database used. Start the server you installed above using `sudo service postgresql start`, then log into the postgres superuser, `sudo su - postgres` and enter the postgresql cli with `psql`. In the CLI, use these commands:
 
-- `CREATE DATABASE opentech;`
+- `CREATE DATABASE hypha;`
 - `CREATE USER [linux username] WITH SUPERUSER LOGIN;`
 - Also, make sure that this user has trust access in pg_hba.conf.
 
@@ -42,7 +65,7 @@ These settings can be restricted later as required.
 
 ### Running the app
 
-First, choose the correct settings - the possibilities are 'dev', 'test', and 'production'. If you're going to set this up in a production setting, then 'production' is the one to use: `export DJANGO_SETTINGS_MODULE=opentech.settings.production`. The application needs a secret key: `export SECRET_KEY='SOME SECRET KEY HERE'`.
+The application needs a secret key: `export SECRET_KEY='SOME SECRET KEY HERE'`.
 
 To begin with, set the `export SECURE_SSL_REDIRECT=false` to prevent SSL redirect. When you've set up SSL for your server, you can change that setting later.
 
