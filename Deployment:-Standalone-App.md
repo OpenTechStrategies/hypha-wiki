@@ -185,3 +185,60 @@ Follow the instructions, and you're done.
 The Django Administration panel is connected to the 'apply' domain: so access that via http://apply.server.domain/django-admin/ (use the email address and password you set in the `python manage.py createsuperuser` step above.)
 
 The Apply dashboard is here: http://apply.server.domain/dashboard/. The Apply Wagtail admin: http://apply.server.domain/admin
+
+### settings
+
+Here is a list of settings that can be set as environment variables or in a `hypha/settings/local.py` file. 
+
+**None optional:**
+
+```
+API_BASE_URL:                                  https://apply.example.org/api
+AWS_ACCESS_KEY_ID:                             [KEY]
+AWS_DEFAULT_ACL:                               None
+AWS_MIGRATION_ACCESS_KEY_ID:                   [KEY]
+AWS_MIGRATION_BUCKET_NAME:                     backup.example.org
+AWS_MIGRATION_SECRET_ACCESS_KEY:               [KEY]
+AWS_PRIVATE_BUCKET_NAME:                       private.example.org
+AWS_PUBLIC_BUCKET_NAME:                        public.example.org
+AWS_PUBLIC_CUSTOM_DOMAIN:                      public.example.org
+AWS_QUERYSTRING_EXPIRE:                        600
+AWS_SECRET_ACCESS_KEY:                         [KEY]
+AWS_STORAGE_BUCKET_NAME:                       public.example.org
+CACHE_CONTROL_MAX_AGE:                         14400
+COOKIE_SECURE:                                 true
+DJANGO_SETTINGS_MODULE:                        hypha.settings.production
+EMAIL_HOST:                                    apply.example.org
+MAILGUN_API_KEY:                               [KEY]
+ORG_EMAIL:                                     hello@example.org
+ORG_GUIDE_URL:                                 https://guide.example.org/
+ORG_LONG_NAME:                                 Long name of your organisation
+ORG_SHORT_NAME:                                Short org name
+PRIMARY_HOST:                                  www.example.org
+PROJECTS_AUTO_CREATE:                          false
+PROJECTS_ENABLED:                              true
+SECRET_KEY:                                    [KEY]
+SEND_MESSAGES:                                 true
+SERVER_EMAIL:                                  app@apply.example.org
+```
+
+**Optional:**
+
+```
+ANYMAIL_WEBHOOK_SECRET:                        [KEY]
+BASIC_AUTH_ENABLED:                            true
+BASIC_AUTH_LOGIN:                              [USER]
+BASIC_AUTH_PASSWORD:                           [PASS]
+BASIC_AUTH_WHITELISTED_HTTP_HOSTS:             www.example.org,apply.example.org
+CLOUDFLARE_API_ZONEID:                         [KEY]
+CLOUDFLARE_BEARER_TOKEN:                       [KEY]
+MAILCHIMP_API_KEY:                             [KEY]-us10
+MAILCHIMP_LIST_ID:                             [ID]
+SEND_READY_FOR_REVIEW:                         false
+SLACK_DESTINATION_ROOM:                        #notify
+SLACK_DESTINATION_ROOM_COMMENTS:               #notes
+SLACK_DESTINATION_URL:                         https://slackbot-example.org/incoming/[KEY]
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY:                 [KEY]
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET:              [KEY]
+SOCIAL_AUTH_GOOGLE_OAUTH2_WHITELISTED_DOMAINS: example.org
+```
