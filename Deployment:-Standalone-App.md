@@ -85,7 +85,7 @@ You should see the home page of the server. That's great. You can stop the serve
 
 ### Deploy with nginx/gunicorn
 
-Make sure gunicorn is installed (it should be). Do a test run with gunicorn: `gunicorn --bind 0.0.0.0:<some port> opentech.wsgi:application` This might not work. It's OK if it doesn't work - you can go on anyway.
+Make sure gunicorn is installed (it should be). Do a test run with gunicorn: `gunicorn --bind 0.0.0.0:<some port> hypha.wsgi:application` This might not work. It's OK if it doesn't work - you can go on anyway.
 
 You need to add a file: /etc/systemd/system/gunicorn.socket. It should have this content:
 
@@ -99,7 +99,7 @@ After=network.target
 User=ubuntu
 Group=www-data
 WorkingDirectory=/path/to/application/
-ExecStart=/path/to/virtual/environment/bin/gunicorn --access-logfile - --workers 3 --bind unix:/path/to/application/gunicorn.sock opentech.wsgi:application -e DJANGO_SETTINGS_MODULE=opentech.settings.production -e SECRET_KEY='SOME SECRET KEY HERE'
+ExecStart=/path/to/virtual/environment/bin/gunicorn --access-logfile - --workers 3 --bind unix:/path/to/application/gunicorn.sock hypha.wsgi:application -e DJANGO_SETTINGS_MODULE=hypha.settings.production -e SECRET_KEY='SOME SECRET KEY HERE'
 
 [Install]
 WantedBy=multi-user.target
@@ -118,11 +118,11 @@ server {
     server_name server.domain;
 
     location ^~/media/(.*)$ {
-        alias /path/to/application/opentech/media/;
+        alias /path/to/application/hypha/media/;
     }
 
     location ^~/static/(.*)$ {
-        alias /path/to/application/opentech/static/;
+        alias /path/to/application/hypha/static/;
     }
 
     location / {
@@ -141,11 +141,11 @@ server {
    server_name apply.server.domain;
 
    location ^~/media/(.*)$ {
-      alias /path/to/application/opentech/media/;
+      alias /path/to/application/hypha/media/;
    }
 
    location ^~/static/(.*)$ {
-      alias /path/to/application/opentech/static/;
+      alias /path/to/application/hypha/static/;
    }
 
    location / {
