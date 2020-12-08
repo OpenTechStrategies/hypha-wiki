@@ -87,7 +87,7 @@ You should see the home page of the server. That's great. You can stop the serve
 
 Make sure gunicorn is installed (it should be). Do a test run with gunicorn: `gunicorn --bind 0.0.0.0:<some port> hypha.wsgi:application` This might not work. It's OK if it doesn't work - you can go on anyway.
 
-You need to add a file: /etc/systemd/system/gunicorn.socket. It should have this content:
+You need to add a file: /etc/systemd/system/gunicorn.service. It should have this content:
 
 ```
 [Unit]
