@@ -14,9 +14,9 @@ This process was tested on Ubuntu 18.04LTS. It should work on any Debian-based s
 
 These are the basic packages needed before you can start the installation process.
 
-- python3-pip - install using  `sudo apt-get install python3-pip`
-- postgresql (version 10.9) use `sudo apt-get install postgresql postgresql-contrib postgresql-server-dev-11`
-- to install nodejs (version v12.5.0), use nodesource. Add the PPA to your sources list by running this script: `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -` then `sudo apt-get install nodejs`
+- python3-pip and python3-venv - install using  `sudo apt-get install python3-pip python3-venv`
+- postgresql (version 11.x or 12.x) use `sudo apt-get install postgresql postgresql-contrib postgresql-server-dev-11`
+- to install nodejs (version v12.x), use nodesource. Add the PPA to your sources list by running this script: `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -` then `sudo apt-get install nodejs`
 
 ### Python virtual environment
 
@@ -71,6 +71,7 @@ To begin with, set the `export SECURE_SSL_REDIRECT=false` to prevent SSL redirec
 
 Then use the following commands to test run the server:
 
+- `gulp deploy`
 - `python manage.py collectstatic --noinput`
 - `python manage.py createcachetable`
 - `python manage.py migrate --noinput`

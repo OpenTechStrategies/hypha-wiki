@@ -6,12 +6,13 @@
 Make sure you have these things installed on your system:
 
 - Git
-- Python 3.7.x (3.6 might work as well)
-- Pip (to install python packages)
-- PostgreSQL 12.x (10+ work as well)
+- Python 3.7.x or 3.8.x
+    - python3-venv (to setup virtual enviroment)
+    - python3-pip (to install python packages)
+- PostgreSQL 12.x
     - libpq-dev (on Linux at least)
 - Apache or Nginx
-- Node 12.x (10+ might work as well)
+- Node 12.x
 
 On Linux install them with your normal package manager. On macOS [Homebrew](https://brew.sh/) is an excellent option.
 
