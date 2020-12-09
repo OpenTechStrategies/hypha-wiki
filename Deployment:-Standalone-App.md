@@ -87,26 +87,7 @@ You should see the home page of the server. That's great. You can stop the serve
 
 Make sure gunicorn is installed (it should be). Do a test run with gunicorn: `gunicorn --bind 0.0.0.0:<some port> hypha.wsgi:application` This might not work. It's OK if it doesn't work - you can go on anyway.
 
-You need to add a file: /etc/systemd/system/gunicorn.service. It should have this content:
-
-```
-[Unit]
-Description=gunicorn service
-Requires=gunicorn.socket
-After=network.target
-
-[Service]
-User=ubuntu
-Group=www-data
-WorkingDirectory=/path/to/application/
-ExecStart=/path/to/virtual/environment/bin/gunicorn --access-logfile - --workers 3 --bind unix:/path/to/application/gunicorn.sock hypha.wsgi:application -e DJANGO_SETTINGS_MODULE=hypha.settings.production -e SECRET_KEY='SOME SECRET KEY HERE'
-
-[Install]
-WantedBy=multi-user.target
-```
-
-You can enable and start the socket by using `sudo systemctl enable gunicorn.socket`, `sudo systemctl start gunicorn.socket`. You can check status of socket using `sudo systemctl status gunicorn.socket`.
-You can test the status of gunicorn: `sudo systemctl status gunicorn`.
+To make gunicorn start automatically with systemd see <https://docs.gunicorn.org/en/stable/deploy.html#systemd>.
 
 Set up DNS so that server.domain and apply.server.domain point to the server you've installed the application. Install nginx if you haven't already (`sudo apt-get install nginx`). You'll need to add two new config files for nginx in /etc/nginx/sites-available:
 
@@ -118,15 +99,18 @@ server {
     server_name server.domain;
 
     location ^~/media/(.*)$ {
-        alias /path/to/application/hypha/media/;
+        alias /path/to/hypha/media/;
     }
 
     location ^~/static/(.*)$ {
-        alias /path/to/application/hypha/static/;
+        alias /path/to/hypha/static/;
     }
 
     location / {
-        include proxy_params;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
         proxy_pass http://unix:/run/gunicorn.sock;
     }
 
@@ -137,20 +121,23 @@ apply
 
 ```
 server {
-   listen 80;
-   server_name apply.server.domain;
+    listen 80;
+    server_name apply.server.domain;
 
-   location ^~/media/(.*)$ {
-      alias /path/to/application/hypha/media/;
-   }
+    location ^~/media/(.*)$ {
+        alias /path/to/hypha/media/;
+    }
 
-   location ^~/static/(.*)$ {
-      alias /path/to/application/hypha/static/;
-   }
+    location ^~/static/(.*)$ {
+        alias /path/to/hypha/static/;
+    }
 
-   location / {
-      include proxy_params;
-      proxy_pass http://unix:/run/gunicorn.sock;
+    location / {
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_pass http://unix:/run/gunicorn.sock;
     }
 }
 ```
@@ -194,22 +181,10 @@ Here is a list of settings that can be set as environment variables or in a `hyp
 
 ```
 API_BASE_URL:                                  https://apply.example.org/api
-AWS_ACCESS_KEY_ID:                             [KEY]
-AWS_DEFAULT_ACL:                               None
-AWS_MIGRATION_ACCESS_KEY_ID:                   [KEY]
-AWS_MIGRATION_BUCKET_NAME:                     backup.example.org
-AWS_MIGRATION_SECRET_ACCESS_KEY:               [KEY]
-AWS_PRIVATE_BUCKET_NAME:                       private.example.org
-AWS_PUBLIC_BUCKET_NAME:                        public.example.org
-AWS_PUBLIC_CUSTOM_DOMAIN:                      public.example.org
-AWS_QUERYSTRING_EXPIRE:                        600
-AWS_SECRET_ACCESS_KEY:                         [KEY]
-AWS_STORAGE_BUCKET_NAME:                       public.example.org
 CACHE_CONTROL_MAX_AGE:                         14400
 COOKIE_SECURE:                                 true
 DJANGO_SETTINGS_MODULE:                        hypha.settings.production
 EMAIL_HOST:                                    apply.example.org
-MAILGUN_API_KEY:                               [KEY]
 ORG_EMAIL:                                     hello@example.org
 ORG_GUIDE_URL:                                 https://guide.example.org/
 ORG_LONG_NAME:                                 Long name of your organisation
@@ -226,6 +201,17 @@ SERVER_EMAIL:                                  app@apply.example.org
 
 ```
 ANYMAIL_WEBHOOK_SECRET:                        [KEY]
+AWS_ACCESS_KEY_ID:                             [KEY]
+AWS_DEFAULT_ACL:                               None
+AWS_MIGRATION_ACCESS_KEY_ID:                   [KEY]
+AWS_MIGRATION_BUCKET_NAME:                     backup.example.org
+AWS_MIGRATION_SECRET_ACCESS_KEY:               [KEY]
+AWS_PRIVATE_BUCKET_NAME:                       private.example.org
+AWS_PUBLIC_BUCKET_NAME:                        public.example.org
+AWS_PUBLIC_CUSTOM_DOMAIN:                      public.example.org
+AWS_QUERYSTRING_EXPIRE:                        600
+AWS_SECRET_ACCESS_KEY:                         [KEY]
+AWS_STORAGE_BUCKET_NAME:                       public.example.org
 BASIC_AUTH_ENABLED:                            true
 BASIC_AUTH_LOGIN:                              [USER]
 BASIC_AUTH_PASSWORD:                           [PASS]
@@ -234,6 +220,7 @@ CLOUDFLARE_API_ZONEID:                         [KEY]
 CLOUDFLARE_BEARER_TOKEN:                       [KEY]
 MAILCHIMP_API_KEY:                             [KEY]-us10
 MAILCHIMP_LIST_ID:                             [ID]
+MAILGUN_API_KEY:                               [KEY]
 SEND_READY_FOR_REVIEW:                         false
 SLACK_DESTINATION_ROOM:                        #notify
 SLACK_DESTINATION_ROOM_COMMENTS:               #notes
