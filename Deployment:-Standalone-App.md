@@ -150,20 +150,7 @@ Then, symlink these to sites-enabled: `sudo ln -s /etc/nginx/sites-available/pub
 
 It's very easy to add SSL via a Let's Encrypt certificate.
 
-Add the certbot ppa:
-
-`sudo add-apt-repository ppa:certbot/certbot`
-`sudo apt update`
-
-Install certbot for nginx: 
-
-`sudo apt install python-certbot-nginx`
-
-Make sure that the server_name is specified in both nginx configuration files (they should be.)
-
-Then get the certificate:
-
-`sudo certbot --nginx -d server.domain -d apply.server.domain`
+See instructions at <https://certbot.eff.org>.
 
 Follow the instructions, and you're done.
 
