@@ -1,139 +1,152 @@
-Below is are the projects objectives by time first and then by theme.
+# Purpose of this document
+* Establish a shared sense of priority
+* Clarify time-based expectations for next-steps and milestones
+* Define terms reference for high-level structural elements
+* Clarify bottom-liners for themes > goals (initiatives) > milestones
+* Aid in the identification of resource needs and constraints
 
-November - December
+# Themes
+**How they are organized:**
 
-Dev Features
-* django-storages 2.0 will no longer default to public-read 
-* Improve the file upload widget
-* For each fund or lab, add a field in the form for the guide url. If exist, display a button on the fund/lab page as well as the application with link.
-* Submissions in state approved need to editable by applicants but also need to end up being "locked" in a final state
-* Make it possible to add reminders to applications
-* Create unique slack channel for notes
-* The ability for a user to create a custom list of submissions they have access to by providing an option for them to flag/bookmark/follow it on the submission page. this list should show up in a new list at the bottom of their dashboard.
-* Ability for team to edit a determination msg with an option to not re-send the applicant notifications 
-* Remove sections of the determination form that don't have any text from the email that goes to applicants
-* Add a clone/copy function on the admin/funds/applicationform/ listing to create a new application based on a previous one 
+## Theme (Vision / Very high level)
+_{meta: priority [], label [], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* Initiatives (Goal)
+  * Epics (Milestones / Objectives)
+    * Stories (Issues / Tasks)
 
-October 
+_**(not in order of priority, tbd together)**_
 
-Dev Features
-* Side-by-Side View [#748](https://github.com/OpenTechFund/opentech.fund/issues/748)
-* Reminder function to applicants and staff reviewers to track and manage deadlines [#1491](https://github.com/OpenTechFund/opentech.fund/issues/1491)
-* Auto populate decision text into determination responses
-* Word/Character Limits [#705](https://github.com/OpenTechFund/opentech.fund/issues/705)
-* Connect submissions that applied to other OTF funds within WebApp [#717](https://github.com/OpenTechFund/opentech.fund/issues/717)
-* Streamline communication channels. Example: We platform is fine with help questions, but there are too many communication channels. Slack is not searchable and user friendly. 
+## API 
+_{meta: priority [], label [[api](https://github.com/OpenTechFund/hypha/labels/api)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* Fully API-driven front-end
+  * apply/ is completely replaced by the React app
+  * Ability for others to create completely different apply/ alternatives
+* Fully documented API
+* R/W API access for 3rd party integrations
+* API permissions interface in admin
+* Begin exposing admin functions via API
 
-SOP
-* Usability/UX research of WebApp
-* Transparent process for prioritizing bug/feature/UX requests
-* Protocol for reporting bug/feature/UX 
-* User manual or documentation on how to use webapp, particularly useful for on-boarding new AC
-* Responsible data policy & security
+## Portfolio management, post-approal, and project management
+_{meta: priority [], label [[portfolio](https://github.com/OpenTechFund/hypha/labels/portfolio)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* 
 
-August - September
-* Bring back the short proposal form for concept notes that are requesting less than 100k #717
-* Create a new page template called "Results", that can be placed anywhere #1248
-* Update the region scheme to the UN scheme and update all submissions accordingly #1173 
-* Create a view of projects and fellows by geographic location (the map of where our support is going idea) #243 
-* As a manager, the ability to customize available options from global fields when displayed on application #311
-* Add a deadline field to determinations and include deadline in any notifications, if included #326
-* Add a "Applications with deadlines" list to a users dashboard, listing submissions with deadlines for both applicants and the leads of those applications #306 
-* As a manager, i need an easy way to track all set deadline dates given to an applicant or staff member #285
-* As a reviewer, receive automated reminders for outstanding reviews assigned as deadlines approach #273
+## 3rd party integrations 
+_{meta: priority [], label [[integration](https://github.com/OpenTechFund/hypha/labels/integration)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* Contract and payment management services (Salesforce, Sage, Netsuite, etc)
+* Messaging and communication services
+* 2-way engagement between channels
+* Delivery confirmation w/in hypha
+* Data portability, export/import
+* Honorarium management services
+* Help/Feedback services
 
-June-July
-* Complete discovery and scoping for summer sprints
-* Creation of [summer spring tickets](https://github.com/OpenTechFund/opentech.fund/issues?q=is%3Aopen+is%3Aissue+label%3Apost-approval) that focus on post approval workflows (project approval forms, contracting, payment requests, and regular project reporting) 
-* Deploy API access for both users and projects
-* Deploy ability for staff to apply labels to submissions (meta)
-* Deploy first set of automation functions
-* Performance and bug fixes always
+## Security and privacy
+_{meta: priority [], label [[privsec](https://github.com/OpenTechFund/hypha/labels/privsec)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* Full db encryption
+* PII handling
+* Sensitive content handling
+  * End-to-end encrypted field data
+* Policy (GDPR/CCPA) management, compliance, consent
+* Annual 3rd party security/privacy code audit
+* Support for additional/multiple SSO providers with access rules
+* Deploy a hypha.app wide (not just for OTF/Reset) bug bounty & disclosure service (ie bugcrowd, hackerone, etc)
 
-From non-priority tickets in the current milestone ([2019-Q3 -priority](https://github.com/OpenTechFund/opentech.fund/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+-label%3Apriority+milestone%3A2019-Q3+))
+## Metrics: Progress, performance, activity, and content
+_{meta: priority [], label [[metrics](https://github.com/OpenTechFund/hypha/labels/metrics)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* KPI’s for system, funds, rounds, managers, applicants
+* KPI’s for system, portfolios, projects, contracts, managers, etc
+  * Dashboard
+  * Ability to make public/publish metrics publicly, to applicants, or all staff
+* Application content trends
+  * Improved content tagging/labeling/rating
+  * Review and reviews labels/meta categories/ etc
+* Improved search
 
-* Harmonize the viability definitions and implement the same options for comments, reviews, and submissions
-* Introduce an optional survey for applicants to complete post final-determination [#835](https://github.com/OpenTechFund/opentech.fund/issues/835)
-* Allow users the ability to see and set their notification preferences in their profile
-* Expose useful meta-data (avg amount approved, type of project, etc) from the API on internal and external pages (ie round and fund pages) 
-* Improve the listing of projects, fellows, and other results on the public facing pages [#1248](https://github.com/OpenTechFund/opentech.fund/issues/1248)
-* Begin offering the ability to associate a Signal number to receive and respond to notifications
-* Ability for users to submit bug or feature requests from within the app or on error pages
+## Participatory and collaborative processes
+_{meta: priority [], label [[collab](https://github.com/OpenTechFund/hypha/labels/collab)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* Peer review of applications (applicants reviewing applications)
+* Community/network review of applications
+* Collaborative applications
+* Flash grants
+* Ability to make an application publicly available
+* Review and refine the “partners” role/functions
 
-### Discussions 
-* What could the API/metadata inform us about current and future programming?
-* What can we infer and what can we deduct from information we have at hand? Do we have complete picture and what are the gaps?
+## Admin/management web interfaces
+_{meta: priority [], label [[admin](https://github.com/OpenTechFund/hypha/labels/admin)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* Full UI/UX audit and discovery for application management
+* Full UI/UX audit and re-discovery for project management
+* Put all user profile options/fields in one place or in both (admin/ or apply/)
+* Create a built-in night-mode theme
+* Support for “smart” application forms (ie available or required fields change based on what previous options were selected)
+
+## Deployability of hypha
+_{meta: priority [], label [[deploy](https://github.com/OpenTechFund/hypha/labels/deploy)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* Build the hypha python/pip/django package
+* Improve standalone docker install 
+* Make it easy to theme/style/customize hypha public, admin, submission pages
+* Support additional popular PaaS’s (ie Scalingo, etc)
+* Begin development of  hypha SaaS (ie my.hypha.app)
+* Increase the number of hypha deployments
+
+## Developer onboarding process
+_{meta: priority [], label [[devel](https://github.com/OpenTechFund/hypha/labels/devel)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* Improve contributor guidelines, standards, practice docs
+* Offer more reward/bounties
+
+## Hypha org/community/brand
+_{meta: priority [], label [[org](https://github.com/OpenTechFund/hypha/labels/org)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* Have first annual hypha dev summit
+* Fully migrate to standalone repository
+* Refine hypha.app website
+* Create standalone hypha community/support spaces
+
+## Automation
+_{meta: priority [], label [[auto](https://github.com/OpenTechFund/hypha/labels/auto)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* Create a workflow/actions editor in the admin UI
+* Create a message/notification editor in the admin UI for any missing ones
+* Enable switches for all existing automations/actions
+* Provide estimates to applicants on time to next stage
+* Review recommendations (based on defined criteria)
+* Suggested applications of interest (based on defined criteria)
+* Auto screening > manual screening > auto determination > manual determination process
+
+## Communication between managers and applicants
+_{meta: priority [], label [[comms](https://github.com/OpenTechFund/hypha/labels/comms)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+* Create a notifications area in the web interface
+* Create notification settings in account management
+* Ability to comment on specific elements of the application workflow (application, reviews, submission responses)
+* Ability to save and receive notification on new revisions without changing state
+* A more structured/flexible back and forth alternative to submission responses
+  * Ability for a team member (lead) to define submission-specific questions that reviewers are asked to respond to, in addition to the predefined review form.
+
+## Not included but important
+Things not to forget and/or bring up above
+* Project reporting
+* Encrypted field
+* Localization/multilingual support
+* Automated application insights
+* Pagination of application forms
+* Conditional logic forms (that bring you to previous defined pages/sections)
+
+# Timeline
+Goals, corresponding issues, and discussions are grouped into 3-month long milestones called horizons. Horizon 1 is the current milestone. Horizon 2 will be next, followed by horizon 3, then 4. This is all aspirational, hopefull, and approximate. 
+
+## Horizon 1
+[Issues](https://github.com/OpenTechFund/hypha/milestone/24) currently being worked on.
+### Goals
+### Discussions
 
 ## Horizon 2
-**_Approx. next 3 months_**
-
-### Dev goals
-Items from the current milestone ([2019-Q3](https://github.com/OpenTechFund/opentech.fund/milestone/2)) not included above or from the approaching milestone ([2019-Q4](https://github.com/OpenTechFund/opentech.fund/milestone/3)).
-
-[todo, need to move items from above down here as is right and go through later milestone and creating high-level summaries]
-
-* Introduce and test post approval features such as PAF, invoice, monthly report, creation/management
-* Review and refine as needed the current responsible data policy
-* Conduct a responsible data audit
-* Change the repo name to an standalone project/app name and release a website highlighting the app itself
-* Create a security information page outlining the security/privacy features of the app along with our ongoing guidelines for future features
-
-
+[Issues](https://github.com/OpenTechFund/hypha/milestone/25) to be addressed in the next 3-6 months
+### Goals
 ### Discussions
-* What are tangible outcomes from having better access to submission information? What materials do we need to meet objectives? Do we have sufficient capacity to implement activities?
-* What further internal or external UX/UI exploratory sessions should we conduct and how best to share feedback with team, applicants, and the public?
-* What additional information and communication do applicants need (ie guidance, messages/comms) and how do we improve our ongoing feedback loop with them?
 
 ## Horizon 3
-**_Approx. next 6 months_**
-
-### Dev goals
-Items not above from the next two or three milestones.
-
-[todo, still need to go through these milestones to create high-level summaries like above]
-
+[Issues](https://github.com/OpenTechFund/hypha/milestone/26) to be addressed in the next 6-9 months
+### Goals
 ### Discussions
-
-* Should we import all the manually created PAF's into the app for a PAF central database?
-* What additional tools or resources do for applicants to navigate various funds, see #697?
-  * Training and how-to materials for external stakeholders
 
 ## Horizon 4
-**_Approx. next 12 months_**
-
-### Dev goals
-Items not above from the next three or four milestones.
-
-[todo, still need to go through these milestones to create high-level summaries like above]
-
+[Issues](https://github.com/OpenTechFund/hypha/milestone/27) to be addressed in the next 9-12 months
+### Goals
 ### Discussions
-* What are our goals one year from now?
-
-The [Following Progress page](https://github.com/OpenTechFund/opentech.fund/wiki/Following-progress) outlines how one can observe, watch, or follow the progress towards the above goals.
-
-# Long-term goals by theme (epics)
-
-In no particular order, we've listed long-term goals for the app below:
-
-* Completely API-driven allowing multi-medium interface and easier 3rd party system integrations
-* Managers ability to create and customize application workflows (this is currently a developer task)
-* Applicants ability to submit end-to-end encrypted information via submission forms
-* Federation between instances, ability for different entities to collectively engage on a shared fund
-* Automated analysis on submissions for common things reviewers manually research/do (repo health, sentiment, community, etc)
-* Support for collaborative / multi-user applications
-* Proving options for peer review workflow (applicants reviewing other applications), other community-wide inputs, and collective decision making functions
-* Automated reports on round, fund, and instance wide data (kpi's, application trends, etc)
-* Integration of online contract/grant agreement signing, payment processing, and monitoring systems
-* Managers ability to create, customize, and deploy a projects reporting format, workflow, and rhythm
-* Bi-directional engagement via all notification mediums (ability to respond via email, slack, signal)
-* Increase access control for most sensitive areas/functions (ie restrict based on device, security key, etc)
-* Ability to deploy automated tests on 3rd party systems to ensure application functions and access permissions are working
-* Interface that allows managers to set conditions for automatically progressing applications from one state to another
-* Support for instance themes on the frontend
-* Ability for creators of content (applicants and reviews) to control the visibility of their content
-* Content wide support for saving drafts (even for anon applicants) and working offline
-* Integration with discourse for community engagement (receiving answers from FAQ, asking questions, posting comments)
-* Creation of a recommendation engine for assigning reviews to managers and reviewers
-* Fully functional responsive Progressive Web App for mobile/tablets (think you can put on your home screen)
-* Creation of a recommendation engine to provide initial suggestions if submissions are in/out of remit
-* Creation of a prediction engine to indicate an submissions likelihood of progressing  
