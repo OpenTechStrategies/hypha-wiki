@@ -8,13 +8,14 @@
 # Themes
 **How they are organized:**
 
-## Theme (Vision / Very high level)
+Theme (Vision / Very high level)
+
 _{meta: priority [], label [], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * Initiatives (Goal)
   * Epics (Milestones / Objectives)
     * Stories (Issues / Tasks)
 
-_**(not in order of priority, tbd together)**_
+_**(not in order of priority, tbd)**_
 
 ## API 
 _{meta: priority [], label [[api](https://github.com/OpenTechFund/hypha/labels/api)], arch/owner [], devs: [], ui/ux: []; qa: []}_
