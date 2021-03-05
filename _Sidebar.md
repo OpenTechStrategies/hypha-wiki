@@ -22,5 +22,6 @@
 
 **Maintaining**
 
+* [Project meetings](https://github.com/OpenTechFund/hypha/wiki/Product-Meetings)
 * [Quarterly milestone rebase](https://github.com/OpenTechFund/hypha/wiki/Quarterly-milestone-rebase) 
 
