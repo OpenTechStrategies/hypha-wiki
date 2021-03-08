@@ -7,7 +7,7 @@ OTF Staff. ([(More detail here)](https://www.notion.so/simplysecure/User-researc
 * Document the invoice workflow
   * Understand the flow of an invoice from when a project member creates it, to when OTF sends the payment to the bank account
   * Understand the different types of contracts
-   * Understand the workflow behind each of those contracts
+    * Understand the workflow behind each of those contracts
   * Understand what parameters need to be in the invoice
 
 - Document the contract creation workflow
