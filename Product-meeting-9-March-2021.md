@@ -8,4 +8,5 @@ Instead, try a unified design so users can tailor the all applications view to m
 
 - [2262](https://github.com/OpenTechFund/hypha/issues/2262)
 Remove, or not, the item pagination on the submissions page?
-
+- [2275](https://github.com/OpenTechFund/hypha/issues/2275)
+Automtically add wagtail systematic required questions to forms by default 
