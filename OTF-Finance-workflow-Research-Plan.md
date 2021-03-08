@@ -13,3 +13,10 @@ OTF Staff. ([(More detail here)](https://www.notion.so/simplysecure/User-researc
 - Document the contract creation workflow
 
 ## When
+
+
+## Equipment and tools
+This research will be done remotely. We'll use a video conferencing tool with screensharing capabilities, whichever is chosen as mst suitable.
+
+## Methods
+We'll use semi-structured interview guides to focus on the subject of interest. Where possible I'll join meetings to shadow during work meetings.
