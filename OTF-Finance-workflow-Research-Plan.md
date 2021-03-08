@@ -1,4 +1,9 @@
 # Summary
+This research plan it to cover the new OTF Finance workflow within Hypha, which covers:
+1. Payment Approval Process
+2. Report Management
+3. Contract Creation and Management
+
 
 ## People to contact
 OTF Staff. ([(More detail here)](https://www.notion.so/simplysecure/User-research-plan-1410d3448e244711b3d529ea37a300ad))
