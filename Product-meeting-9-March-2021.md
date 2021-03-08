@@ -10,6 +10,14 @@ Instead, try a unified design so users can tailor the all applications view to m
 Remove, or not, the item pagination on the submissions page?
 ### Next steps
 
+- [2263](https://github.com/OpenTechFund/hypha/issues/2263)
+Remove or not?
+### Next steps
+
 - [2275](https://github.com/OpenTechFund/hypha/issues/2275)
 Automtically add wagtail systematic required questions to forms by default 
 ### Next steps
+
+- [2214](https://github.com/OpenTechFund/hypha/issues/2214) 
+Discuss. Is this part of Hypha WL? Do OTF need to use this?
+
