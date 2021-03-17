@@ -1,8 +1,8 @@
 ## Agenda
-- create payment request invoice walkthrough
- - any information fields missing?
- - feedback?
-
+- Do we need to change meeting times?
+- Create payment request invoice walkthrough
+ - Any information fields missing?
+ - Feedback?
 
 ### Requests
-- share accounting system field
+- Share accounting system field
