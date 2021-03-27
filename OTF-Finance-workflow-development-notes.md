@@ -16,6 +16,12 @@ A contractor needs to be able to file a payment for request including:
 - the option to add a comment for the payment
 - choose which deliverables are covered in the payment request (the deliverable code needs to be in the list) 
 
+### Fixed Price Contract line items
+The contractor is invoicing for deliverables they have worked on. Each deliverable needs to show its individual code. Code should be of format: Programme Project Number-Vendor Number-XX-Deliverable letter
+(XX: contract amendment: 0, 1, 2, etc)
+(Deliverable letter: for each individual deliverable)
+
+e.g.: 245-102-01-A
 
 ## Time and Materials contract
 A contractor needs to be able to file a payment for request including:
