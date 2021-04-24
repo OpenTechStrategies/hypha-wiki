@@ -13,19 +13,19 @@ From @frjo
 
 ## Design and research work to discuss
 
-### [2278](https://github.com/OpenTechFund/hypha/discussions/2278)
+### [2278](https://github.com/HyphaApp/hypha/discussions/2278)
 Creating specific views for screening, reviewing for each separate funder may be a lot of work, that will not meet people's needs.
-Instead, try a unified design so users can tailor the all applications view to meet their needs. This work is being tracked in [in this discussion thread](https://github.com/OpenTechFund/hypha/discussions/2278).
+Instead, try a unified design so users can tailor the all applications view to meet their needs. This work is being tracked in [in this discussion thread](https://github.com/HyphaApp/hypha/discussions/2278).
 
 The purpose of this view is to allow users to see the same list of applications, and to save unnecessary implementation.
 
 **Next steps**
 - we also want to have analytics on this section.
   - Action: Bernard to open a metrics ticket to measure usage of UI sections, what filters are used most in the design. It needs to have a track on each filter drop-down
-- Action: Everyone to give feedback on the designs here: https://github.com/OpenTechFund/hypha/discussions/2278
+- Action: Everyone to give feedback on the designs here: https://github.com/HyphaApp/hypha/discussions/2278
 - Terminology for these different views/lists/displays
 
-### [2262](https://github.com/OpenTechFund/hypha/issues/2262)
+### [2262](https://github.com/HyphaApp/hypha/issues/2262)
 Remove, or not, the item pagination on the submissions page?
 
 **Decisions**
@@ -34,7 +34,7 @@ Remove!
 **Next steps**
 - Nothing needed.
 
-### [2263](https://github.com/OpenTechFund/hypha/issues/2263)
+### [2263](https://github.com/HyphaApp/hypha/issues/2263)
 Remove or not?
 
 **Decisions**
@@ -43,19 +43,19 @@ remove!
 **Next steps**
 - Nothing needed
 
-### [2275](https://github.com/OpenTechFund/hypha/issues/2275)
+### [2275](https://github.com/HyphaApp/hypha/issues/2275)
 Automtically add wagtail systematic required questions to forms by default 
 
 **Next steps**
 
-### [2214](https://github.com/OpenTechFund/hypha/issues/2214) 
+### [2214](https://github.com/HyphaApp/hypha/issues/2214) 
 Discuss. Is this part of Hypha WL? Do OTF need to use this?
 
 **Next steps**
 This is not needed by OTF right now. It would be nice to have at a later date.
-Action: Bernard review the design implemented here: https://github.com/OpenTechFund/hypha/issues/2214
+Action: Bernard review the design implemented here: https://github.com/HyphaApp/hypha/issues/2214
 
-### [2276](https://github.com/OpenTechFund/hypha/issues/2276)[which was moved to a discussion](https://github.com/OpenTechFund/hypha/discussions/2277)
+### [2276](https://github.com/HyphaApp/hypha/issues/2276)[which was moved to a discussion](https://github.com/HyphaApp/hypha/discussions/2277)
 Create a "concept note" feature that goes before the funds.
 Discuss. This fund/category organisation would be purely internal. Discussed suggestions of how to do it.
 
@@ -72,7 +72,7 @@ Based on how the short term solution goes, make
 Most important is: Single apply button and then splitting into categories.
 
 
-### [2273](https://github.com/OpenTechFund/hypha/issues/2273)
+### [2273](https://github.com/HyphaApp/hypha/issues/2273)
 Single Button Apply Review Forms
 The suggestion is to 
 Discuss this at next weeks meeting.

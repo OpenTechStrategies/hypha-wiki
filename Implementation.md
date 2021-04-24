@@ -8,7 +8,7 @@ Media is encouraged to be split into two distinct storage locations. A Public an
 
 2. Maintains separation between the two halves of the platform, Apply and Public.
 
-Media should also be served from a view that inherits from the [PrivateMediaView](https://github.com/OpenTechFund/hypha/blob/master/hypha/apply/utils/storage.py) which will confirm that the file isn't made public and can be configured to return the file object from an authenticated view.
+Media should also be served from a view that inherits from the [PrivateMediaView](https://github.com/HyphaApp/hypha/blob/master/hypha/apply/utils/storage.py) which will confirm that the file isn't made public and can be configured to return the file object from an authenticated view.
 
 ## Public site
 
@@ -18,11 +18,11 @@ The Public site is intended to be a heavily cached public site with no behaviour
 ### Coupling
 The coupling between the Public and Apply sites has been done in such as way as to minimise the interaction between the two sites and facilitate a means of separation should the need arise. Their relationship is defined in the Public fund models:
 
-* [BaseApplicationPage.application_type](https://github.com/OpenTechFund/hypha/blob/master/hypha/public/funds/models.py)
-* [LabPage.lab_type](https://github.com/OpenTechFund/hypha/blob/master/hypha/public/funds/models.py)
+* [BaseApplicationPage.application_type](https://github.com/HyphaApp/hypha/blob/master/hypha/public/funds/models.py)
+* [LabPage.lab_type](https://github.com/HyphaApp/hypha/blob/master/hypha/public/funds/models.py)
 
 #### Data: Public to Apply
-The public site relies on the apply site to provide information on the related round status, open or closed and any closing dates for the round. The majority of this is within the [apply cta](https://github.com/OpenTechFund/hypha/blob/master/hypha/public/funds/templates/public_funds/includes/fund_apply_cta.html). 
+The public site relies on the apply site to provide information on the related round status, open or closed and any closing dates for the round. The majority of this is within the [apply cta](https://github.com/HyphaApp/hypha/blob/master/hypha/public/funds/templates/public_funds/includes/fund_apply_cta.html). 
 
 Removing the database relationship and exposing the required data over an API would be all thats required to split the two sites.
 
@@ -31,8 +31,8 @@ The `application_public` and `lab_public` relations are then exposed on the appl
 
 ## URL configuration
 
-The two site have different url configurations, this limits the Apply site to a subset of the urls in the project. This is configured as part of the middleware stack using [apply_url_conf_middleware](https://github.com/OpenTechFund/hypha/blob/master/hypha/apply/middleware.py). This swaps out the url configuration based on the site homepage configured in the wagtail admin.
+The two site have different url configurations, this limits the Apply site to a subset of the urls in the project. This is configured as part of the middleware stack using [apply_url_conf_middleware](https://github.com/HyphaApp/hypha/blob/master/hypha/apply/middleware.py). This swaps out the url configuration based on the site homepage configured in the wagtail admin.
 
 The default url configuration is for the Public site which are shared by the Public and Apply sites.
 
-The Public site has access to the "public authentication" urls, this enables reverse lookup of the url in templates, such as the [login button](https://github.com/OpenTechFund/hypha/blob/master/hypha/public/utils/templates/utils/includes/login_button.html), but the user is redirected to the apply site. Visiting https://<publicsite\>/login will present a login screen.
+The Public site has access to the "public authentication" urls, this enables reverse lookup of the url in templates, such as the [login button](https://github.com/HyphaApp/hypha/blob/master/hypha/public/utils/templates/utils/includes/login_button.html), but the user is redirected to the apply site. Visiting https://<publicsite\>/login will present a login screen.

@@ -18,7 +18,7 @@ _{meta: priority [], label [], arch/owner [], devs: [], ui/ux: []; qa: []}_
 _**(not in order of priority, tbd)**_
 
 ## API 
-_{meta: priority [], label [[api](https://github.com/OpenTechFund/hypha/labels/api)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[api](https://github.com/HyphaApp/hypha/labels/api)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * Fully API-driven front-end
   * apply/ is completely replaced by the React app
   * Ability for others to create completely different apply/ alternatives
@@ -28,11 +28,11 @@ _{meta: priority [], label [[api](https://github.com/OpenTechFund/hypha/labels/a
 * Begin exposing admin functions via API
 
 ## Portfolio management, post-approal, and project management
-_{meta: priority [], label [[portfolio](https://github.com/OpenTechFund/hypha/labels/portfolio)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[portfolio](https://github.com/HyphaApp/hypha/labels/portfolio)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * 
 
 ## 3rd party integrations 
-_{meta: priority [], label [[integration](https://github.com/OpenTechFund/hypha/labels/integration)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[integration](https://github.com/HyphaApp/hypha/labels/integration)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * Contract and payment management services (Salesforce, Sage, Netsuite, etc)
 * Messaging and communication services
 * 2-way engagement between channels
@@ -42,7 +42,7 @@ _{meta: priority [], label [[integration](https://github.com/OpenTechFund/hypha/
 * Help/Feedback services
 
 ## Security and privacy
-_{meta: priority [], label [[privsec](https://github.com/OpenTechFund/hypha/labels/privsec)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[privsec](https://github.com/HyphaApp/hypha/labels/privsec)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * Full db encryption
 * PII handling
 * Sensitive content handling
@@ -53,7 +53,7 @@ _{meta: priority [], label [[privsec](https://github.com/OpenTechFund/hypha/labe
 * Deploy a hypha.app wide (not just for OTF/Reset) bug bounty & disclosure service (ie bugcrowd, hackerone, etc)
 
 ## Metrics: Progress, performance, activity, and content
-_{meta: priority [], label [[metrics](https://github.com/OpenTechFund/hypha/labels/metrics)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[metrics](https://github.com/HyphaApp/hypha/labels/metrics)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * KPI’s for system, funds, rounds, managers, applicants
 * KPI’s for system, portfolios, projects, contracts, managers, etc
   * Dashboard
@@ -64,7 +64,7 @@ _{meta: priority [], label [[metrics](https://github.com/OpenTechFund/hypha/labe
 * Improved search
 
 ## Participatory and collaborative processes
-_{meta: priority [], label [[collab](https://github.com/OpenTechFund/hypha/labels/collab)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[collab](https://github.com/HyphaApp/hypha/labels/collab)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * Peer review of applications (applicants reviewing applications)
 * Community/network review of applications
 * Collaborative applications
@@ -73,7 +73,7 @@ _{meta: priority [], label [[collab](https://github.com/OpenTechFund/hypha/label
 * Review and refine the “partners” role/functions
 
 ## Admin/management web interfaces
-_{meta: priority [], label [[admin](https://github.com/OpenTechFund/hypha/labels/admin)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[admin](https://github.com/HyphaApp/hypha/labels/admin)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * Full UI/UX audit and discovery for application management
 * Full UI/UX audit and re-discovery for project management
 * Put all user profile options/fields in one place or in both (admin/ or apply/)
@@ -81,7 +81,7 @@ _{meta: priority [], label [[admin](https://github.com/OpenTechFund/hypha/labels
 * Support for “smart” application forms (ie available or required fields change based on what previous options were selected)
 
 ## Deployability of hypha
-_{meta: priority [], label [[deploy](https://github.com/OpenTechFund/hypha/labels/deploy)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[deploy](https://github.com/HyphaApp/hypha/labels/deploy)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * Build the hypha python/pip/django package
 * Improve standalone docker install 
 * Make it easy to theme/style/customize hypha public, admin, submission pages
@@ -90,19 +90,19 @@ _{meta: priority [], label [[deploy](https://github.com/OpenTechFund/hypha/label
 * Increase the number of hypha deployments
 
 ## Developer onboarding process
-_{meta: priority [], label [[devel](https://github.com/OpenTechFund/hypha/labels/devel)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[devel](https://github.com/HyphaApp/hypha/labels/devel)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * Improve contributor guidelines, standards, practice docs
 * Offer more reward/bounties
 
 ## Hypha org/community/brand
-_{meta: priority [], label [[org](https://github.com/OpenTechFund/hypha/labels/org)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[org](https://github.com/HyphaApp/hypha/labels/org)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * Have first annual hypha dev summit
 * Fully migrate to standalone repository
 * Refine hypha.app website
 * Create standalone hypha community/support spaces
 
 ## Automation
-_{meta: priority [], label [[auto](https://github.com/OpenTechFund/hypha/labels/auto)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[auto](https://github.com/HyphaApp/hypha/labels/auto)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * Create a workflow/actions editor in the admin UI
 * Create a message/notification editor in the admin UI for any missing ones
 * Enable switches for all existing automations/actions
@@ -112,7 +112,7 @@ _{meta: priority [], label [[auto](https://github.com/OpenTechFund/hypha/labels/
 * Auto screening > manual screening > auto determination > manual determination process
 
 ## Communication between managers and applicants
-_{meta: priority [], label [[comms](https://github.com/OpenTechFund/hypha/labels/comms)], arch/owner [], devs: [], ui/ux: []; qa: []}_
+_{meta: priority [], label [[comms](https://github.com/HyphaApp/hypha/labels/comms)], arch/owner [], devs: [], ui/ux: []; qa: []}_
 * Create a notifications area in the web interface
 * Create notification settings in account management
 * Ability to comment on specific elements of the application workflow (application, reviews, submission responses)
@@ -133,21 +133,21 @@ Things not to forget and/or bring up above
 Goals, corresponding issues, and discussions are grouped into 3-month long milestones called horizons. Horizon 1 is the current milestone. Horizon 2 will be next, followed by horizon 3, then 4. This is all aspirational, hopefull, and approximate. 
 
 ## Horizon 1
-[Issues](https://github.com/OpenTechFund/hypha/milestone/24) currently being worked on.
+[Issues](https://github.com/HyphaApp/hypha/milestone/24) currently being worked on.
 ### Goals
 ### Discussions
 
 ## Horizon 2
-[Issues](https://github.com/OpenTechFund/hypha/milestone/25) to be addressed in the next 3-6 months
+[Issues](https://github.com/HyphaApp/hypha/milestone/25) to be addressed in the next 3-6 months
 ### Goals
 ### Discussions
 
 ## Horizon 3
-[Issues](https://github.com/OpenTechFund/hypha/milestone/26) to be addressed in the next 6-9 months
+[Issues](https://github.com/HyphaApp/hypha/milestone/26) to be addressed in the next 6-9 months
 ### Goals
 ### Discussions
 
 ## Horizon 4
-[Issues](https://github.com/OpenTechFund/hypha/milestone/27) to be addressed in the next 9-12 months
+[Issues](https://github.com/HyphaApp/hypha/milestone/27) to be addressed in the next 9-12 months
 ### Goals
 ### Discussions
