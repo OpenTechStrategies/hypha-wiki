@@ -25,7 +25,7 @@ OBS! All examples from now on will use the `hypha.test` domains.
 ## Get the code
 
 ~~~~
-$ git clone git@github.com:OpenTechFund/hypha.git hypha
+$ git clone https://github.com/HyphaApp/hypha.git hypha
 
 $ cd hypha
 ~~~~
@@ -109,7 +109,7 @@ apt install wget
 Then download the sandbox db dump from Github.
 
 ~~~~
-wget https://github.com/OpenTechFund/opentech.fund/raw/sandbox/public/sandbox_db.dump
+wget https://github.com/HyphaApp/hypha/raw/sandbox/public/sandbox_db.dump
 ~~~~
 
 Before being able to work on this database, you have to drop and prevent any other connections to it. 

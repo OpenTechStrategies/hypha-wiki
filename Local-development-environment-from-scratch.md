@@ -38,7 +38,7 @@ OBS! All examples from now on will use the `hypha.test` domains.
 ## Get the code
 
 ~~~~
-$ git clone git@github.com:OpenTechFund/hypha.git hypha
+$ git clone https://github.com/HyphaApp/hypha.git hypha
 
 $ cd hypha
 ~~~~

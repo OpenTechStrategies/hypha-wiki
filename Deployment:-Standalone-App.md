@@ -7,7 +7,7 @@ This process was tested on Ubuntu 18.04LTS. It should work on any Debian-based s
 
 ### Get the code
 
-`git clone git@github.com:OpenTechFund/hypha.git [your-site-directory]`
+`git clone https://github.com/HyphaApp/hypha.git [your-site-directory]`
 
 
 ### Basic installation steps.
